@@ -10,51 +10,50 @@
 int main(int argc, string argv[])
 
 {
-    int replace(string cadena);
+    string replace(string cadena);
 
     //todo: evaluar entrada de la llamada al programa, devolver 1 si no hay argumentos o son mas de 2
-    if (argc = 1)
+
+    if (argc == 2)
         {
          // llamar a la funcion replace que cambia las vocales de la cadena que se paso como argumento
 
         string cadena= argv[1];
 
-        replace(cadena);
-
+        printf("%s\n", replace(cadena));
         }
     else
         {
-            printf("el valor de la cadena %i", argc);
+            printf("Usage: %s word \n", argv[0]);
             return 1;
         }
 }
 
-int replace(string cadena)
-{
+string replace(string cadena)
+    {
 
-int n=strlen(cadena);
+    int n=strlen(cadena);
 
     for (int i= 0; i < n; i++)
             {
                  char letra = cadena[i];
+
                  switch (letra)
                     {
                          case 'a':
-                            printf("6");
+                            letra='6';
                             break;
                         case 'e':
-                            printf("3");
+                            letra='3';
                             break;
                         case 'i':
-                            printf("1");
+                            letra='1';
                             break;
                         case 'o':
-                            printf("0");
-                            break;
-                        default:
-                            printf("%c", letra);
+                            letra='0';;
                             break;
                     }
+               cadena[i]=letra;
           }
-return 1;
-}
+    return (cadena);
+ }
