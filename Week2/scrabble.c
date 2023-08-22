@@ -20,17 +20,17 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
-    if (score1=score2)
+    if (score1<score2)
     {
-        printf("Tie!\n"); 
+        printf("Player 2 wins!\n"); 
     }    
     else if (score1>score2)
     {
-        printf("Player 1 Win!!\n"); 
+        printf("Player 1 wins!\n"); 
     }
     else 
     {
-        printf("Player 2 Win!!\n");
+        printf("Tie!\n");
     }
 }
 
@@ -46,10 +46,10 @@ int compute_score(string word)
     {
         // buscar el valor ascii (65 - A, 90 - Z) de la palabra y buscar la referencia en el arreglo POINTS
         c= word[i];
-        c= toupper(c);
-        if (isascii(c) >= 65 && isascii(c)<= 90) //es una letra
+        pos= toascii(toupper(c));
+        
+        if (pos >= 65 && pos <= 90) //es una letra
             {
-             pos= toascii(c);
              score=POINTS[(pos-65)] + score;
             }
     }
