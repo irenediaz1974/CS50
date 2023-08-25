@@ -3,3 +3,6 @@
 .vscode/tasks.json
 Week2/.vscode/c_cpp_properties.json
 Week1/.vscode/c_cpp_properties.json
+Week1/cs50.c
+.gitignore
+Week1/cs50.h
