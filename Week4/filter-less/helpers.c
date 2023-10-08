@@ -75,119 +75,131 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             fullrow[i][j].rgbtRed = image[i][j].rgbtRed;
         }
 
-        for (int j = 0; j < width; j++)
-        {
-        //Read pixel and swap
-          image[i][j].rgbtBlue = fullrow[i][(width -1) - j].rgbtBlue;
-          image[i][j].rgbtGreen = fullrow[i][(width -1)- j].rgbtGreen ;
-          image[i][j].rgbtRed = fullrow[i][(width -1) - j].rgbtRed;
-        }
+      
     }
 
 
     return;
 }
 
-// Blur image. Find the average of the near pixels
+// Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
- 
- RGBTRIPLE(*matrix)[3] = calloc(3, 3* sizeof(RGBTRIPLE));
 
-  for (int i = 0; i < 3; i++)
+    RGBTRIPLE fullrow[height][width];
+
+    for (int x = 0; x < height; x++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int y = 0; y < width; y++)
         {
-            matrix[i][j].rgbtBlue =0x0;
-            matrix[i][j].rgbtGreen = 0x0;
-            matrix[i][j].rgbtRed = 0x0;
+            // Read pixel and save it in a tmp rbgtriple
+             fullrow[x][y] = image[x][y];
+
+        }
+    }
+    for (int i = 0; i < height ; i++)
+    {
+        for (int j = 0; j < width ; j++)
+        {
+            int blue=0x0 , green=0x0 , red=0x0 ;
+             // left up corner
+            if ((i == 0) && (j == 0))
+            {
+                for (int x = 0; x <= 1; x++)
+                {
+                    for (int y = 0; y <= 1; y++)
+                    {
+                         blue = blue + fullrow[x][y].rgbtBlue;
+                         green = green + fullrow[x][y].rgbtGreen;
+                         red = red + fullrow[x][y].rgbtRed;
+                    }
+                }
+                image[i][j].rgbtBlue= (float) roundf ( blue / 4.0) ;
+                image[i][j].rgbtGreen= (float) roundf ( green / 4.0)  ;
+                image[i][j].rgbtRed= (float) roundf ( red / 4.0) ;
+                blue =  0x0;
+                green= 0x0;
+                red= 0x0;                    
+              }
+            // right up corner
+            if ((i == 0) && (j == width - 1))
+            {
+                for (int x = 0; x <= 1; x++)
+                {
+                    for (int y = width - 2 ; y <=  width - 1; y++)
+                    {
+                         blue = blue + fullrow[x][y].rgbtBlue;
+                         green = green + fullrow[x][y].rgbtGreen;
+                         red = red + fullrow[x][y].rgbtRed;
+                    }
+                }
+                image[i][j].rgbtBlue= (float) roundf ( blue / 4.0) ;
+                image[i][j].rgbtGreen= (float) roundf ( green / 4.0)  ;
+                image[i][j].rgbtRed= (float) roundf ( red / 4.0) ;
+                blue =  0x0;
+                green= 0x0;
+                red= 0x0;                    
+            }
+             // left down corner
+            if ((i == height - 1) && (j == 0))
+            {
+                for (int x = height - 2 ; x <= height - 1; x++)
+                {
+                    for (int y = 0; y <= 1; y++)
+                    {
+                        blue = blue + fullrow[x][y].rgbtBlue;
+                        green = green + fullrow[x][y].rgbtGreen;
+                        red = red + fullrow[x][y].rgbtRed;
+                    }
+                }
+                image[i][j].rgbtBlue= (float) roundf ( blue / 4.0) ;
+                image[i][j].rgbtGreen= (float) roundf ( green / 4.0)  ;
+                image[i][j].rgbtRed= (float) roundf ( red / 4.0) ;
+                blue =  0x0;
+                green= 0x0;
+                red= 0x0;                 
+            }
+               // right down corner
+            if ((i == height - 1) && (j == width - 1))
+            {
+                  for (int x = height - 2 ; x <= height - 1; x++)
+                    {
+                        for (int y = width - 2 ; y <=  width - 1; y++)
+                        {
+                         blue = blue + fullrow[x][y].rgbtBlue;
+                         green = green + fullrow[x][y].rgbtGreen;
+                         red = red + fullrow[x][y].rgbtRed;
+                        }
+                    }
+                image[i][j].rgbtBlue= (float) roundf ( blue / 4.0) ;
+                image[i][j].rgbtGreen= (float) roundf ( green / 4.0)  ;
+                image[i][j].rgbtRed= (float) roundf ( red / 4.0) ;
+                blue =  0x0;
+                green= 0x0;
+                red= 0x0;                 
+            }              
+              //middle pixel
+              if ( (i >= 1 && i <= height -2) && (j >= 1 && j <= width - 2))
+              {
+                  for (int x= i - 1; x <= i + 1; x++)
+                    {
+                       for (int y = j - 1; y <= j + 1; y++)
+                        {
+                            blue = blue + fullrow[x][y].rgbtBlue;
+                            green = green + fullrow[x][y].rgbtGreen;
+                            red = red + fullrow[x][y].rgbtRed;
+                        }
+                    }
+                image[i][j].rgbtBlue= (float) roundf ( blue / 9.0) ;
+                image[i][j].rgbtGreen= (float) roundf ( green / 9.0)  ;
+                image[i][j].rgbtRed= (float) roundf ( red / 9.0) ;
+                blue =  0x0;
+                green= 0x0;
+                red= 0x0;
+              } 
         }
     }
 
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {        
-            // First row of matrix
-            if (image[i-1][j-1].rgbtBlue!=NULL)
-            {
-                matrix[0][0].rgbtBlue= image[i-1][j-1].rgbtBlue;
-                matrix[0][0].rgbtGreen=image[i-1][j-1].rgbtGreen;
-                matrix[0][0].rgbtRed = image[i-1][j-1].rgbtRed;
-            } 
-           
-           if (image[i-1][j].rgbtBlue!=NULL)
-            {
-                matrix[0][1].rgbtBlue= image[i-1][j].rgbtBlue;
-                matrix[0][1].rgbtGreen=image[i-1][j].rgbtGreen;
-                matrix[0][1].rgbtRed = image[i-1][j].rgbtRed;
-            } 
-            if (image[i-1][j+1].rgbtBlue!=NULL)
-            {
-                matrix[0][2].rgbtBlue= image[i-1][j+1].rgbtBlue;
-                matrix[0][2].rgbtGreen=image[i-1][j+1].rgbtGreen;
-                matrix[0][2].rgbtRed = image[i-1][j+1].rgbtRed;
-            } 
-            //second row of matrix
-            if (image[i][j-1].rgbtBlue!=NULL)
-            {
-                matrix[1][0].rgbtBlue= image[i][j-1].rgbtBlue;
-                matrix[1][0].rgbtGreen=image[i][j-1].rgbtGreen;
-                matrix[1][0].rgbtRed = image[i][j-1].rgbtRed;
-            } 
-            if (image[i][j].rgbtBlue!=NULL)
-            {
-                matrix[1][1].rgbtBlue= image[i][j].rgbtBlue;
-                matrix[1][1].rgbtGreen=image[i][j].rgbtGreen;
-                matrix[1][1].rgbtRed = image[i][j].rgbtRed;
-            } 
-            if (image[i][j+1].rgbtBlue!=NULL)
-            {
-                matrix[1][2].rgbtBlue= image[i][j+1].rgbtBlue;
-                matrix[1][2].rgbtGreen=image[i][j+1].rgbtGreen;
-                matrix[1][2].rgbtRed = image[i][j+1].rgbtRed;
-            } 
-            //third row
-             if (image[i+1][j-1].rgbtBlue!=NULL)
-            {
-                matrix[2][0].rgbtBlue= image[i+1][j-1].rgbtBlue;
-                matrix[2][0].rgbtGreen=image[i+1][j-1].rgbtGreen;
-                matrix[2][0].rgbtRed = image[i+1][j-1].rgbtRed;
-            } 
-            if (image[i+1][j].rgbtBlue!=NULL)
-            {
-                matrix[2][1].rgbtBlue= image[i+1][j].rgbtBlue;
-                matrix[2][1].rgbtGreen=image[i+1][j].rgbtGreen;
-                matrix[2][1].rgbtRed = image[i+1][j].rgbtRed;
-            } 
-            if (image[i+1][j+1].rgbtBlue!=NULL)
-            {
-                matrix[2][2].rgbtBlue= image[i+1][j+1].rgbtBlue;
-                matrix[2][2].rgbtGreen=image[i+1][j+1].rgbtGreen;
-                matrix[2][2].rgbtRed = image[i+1][j+1].rgbtRed;
-            } 
-
-            int Blue=0x0;
-            int Green=0x0;
-            int Red=0x0;
-            int counter_ave=0;
-            for (int i = 0; i < 3; i++)
-            {
-                 for (int j = 0; j < 3; j++)
-                {
-                    if (matrix[i][j].rgbtBlue!= 0 || matrix[i][j].rgbtGreen!= 0 || matrix[i][j].rgbtRed!= 0 )
-                    {
-                        counter_ave+=1;
-                        Blue=  matrix[i][j].rgbtBlue;
-                        Green= matrix[i][j].rgbtGreen;
-                        Red= matrix[i][j].rgbtRed;
-                    }               
-                }
-            }
-        // update the pixels in the image
-        image[i][j].rgbtBlue = Blue/ counter_ave;
-        image[i][j].rgbtGreen = Green / counter_ave ;
-        image[i][j].rgbtRed = Red / counter_ave;
-        }
-   }
+ return;
 }
+
