@@ -1,0 +1,199 @@
+Implemente un programa llamado recuperar que recupere archivos JPEG de una imagen forense.
+
+    Implemente su programa en un archivo llamado recovery.c en un directorio llamado recovery.
+    Su programa debe aceptar exactamente un argumento de línea de comando,
+     el nombre de una imagen forense de la cual recuperar archivos JPEG.
+    Si su programa no se ejecuta con exactamente un argumento de línea de comando,
+    debería recordarle al usuario el uso correcto y main debería devolver 1.
+    Si la imagen forense no se puede abrir para su lectura,
+    su programa debería informar al usuario de ello y main debería devolver 1.
+    Cada uno de los archivos que genere debe llamarse ###.jpg,
+    donde ### es un número decimal de tres dígitos,
+    comenzando con 000 para la primera imagen y contando hacia arriba.
+    Su programa, si usa malloc, no debe perder memoria.
+
+1- Tenga en cuenta que puede abrir card.raw mediante
+ programación con fopen, como se muestra a continuación, siempre que exista argv[1].
+  FILE *file = fopen(argv[1], "r");
+2- Cuando se ejecute, su programa debería recuperar cada uno de los archivos JPEG de card.raw,
+ almacenándolos como un archivo separado en su directorio de trabajo actual.
+  Su programa debe numerar los archivos que genera nombrando cada uno ###.jpg,
+   donde ### es un número decimal de tres dígitos desde 000 en adelante.
+   Hazte amigo de sprintf y ten en cuenta que sprintf almacena una cadena formateada
+   en una ubicación de la memoria.
+   Dado el formato ###.jpg prescrito para el nombre de archivo JPEG,
+    ¿cuántos bytes debería asignar para esa cadena? (¡No olvides el carácter NUL!)
+
+No es necesario que intente recuperar los nombres originales de los archivos JPEG.
+ Para comprobar si los archivos JPEG que genera su programa son correctos,
+  simplemente haga doble clic y ¡eche un vistazo!
+  Si cada foto aparece intacta, ¡es probable que su operación haya sido un éxito!
+
+Sin embargo, lo más probable es que los archivos JPEG
+que arroja el primer borrador de su código no sean correctos.
+(Si los abre y no ve nada, probablemente no sean correctos).
+ Ejecute el siguiente comando para eliminar todos los archivos JPEG en su directorio de trabajo actual.
+ rm -f *.jpg
+
+ Si desea crear un nuevo tipo para almacenar un byte de datos,
+  puede hacerlo a través de lo siguiente,
+  que define un nuevo tipo llamado BYTE como uint8_t
+  (un tipo definido en stdint.h, que representa un entero sin signo).
+
+  Tenga en cuenta también que puede leer datos de un archivo usando fread,
+   que leerá los datos de un archivo en una ubicación en la memoria.
+    Según su página de manual, fread devuelve la cantidad de bytes que ha leído,
+    en cuyo caso debería devolver 512 o 0, dado que card.raw contiene
+    una cierta cantidad de bloques de 512 bytes.
+    Para leer cada bloque de card.raw, después de abrirlo con fopen,
+    debería ser suficiente usar un bucle como:
+    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    {
+
+
+    }
+
+
+
+
+TODO
+- open memory card
+  FILE *f = fopen (filename, "r");
+- look for beginning of a JPEG
+ 	  . first byte= 0xff   ...  buffer[0]== 0xff
+  	 - second byte= 0xd8 --- buffer[1]== 0xd8
+  	 - third byte= 0xff -- buffer[2]==  0xff
+  	-  fourth byte (buffer[3] & 0xf0)== 0xe0
+	Leer la memoria:
+		fread (data, size, number, inptr);
+		donde:
+
+		data: apuntador a donde almacenar los datos que estoy leyendo. una matriz por ejemplo
+		size: tamaño de cada elemento a leer en el archivo
+		number: numero de elementos que desee leer todos a la vez
+		inptr: FILE * to read from 	(achivo del que estas leyendo los datos)
+
+
+	- open a new JPEG
+
+		- el nombre debera ser ###.jpg comnzando por 000.jpg
+	se debera hacer un seguiminto de cuantos jpg has encontrado para el nombre, para crear la cadena con los 3 digitos :
+	sprintf(filename, "%03i.jpg", 2)
+	despues de creado el achivo, abrirlo:
+	FILE *img = fopen (filename, w)
+
+
+	- write 512 bytes until a new JPEG is found
+
+	como escribir?
+
+	fwrite(data, size, number, outptr)
+
+	donde data: es un puntero a los bytes que van a ser escritos en el fichero
+	size: tamaño de cada elemento a escribir
+	number: la cantidad de elementos que vas a escribir
+	outptr; el puntero al archivo donde escribire FILE *
+
+- stop at the end
+
+	como fread retorna el numero de items del tamaño "size" que se leyeron
+
+- La memoria tiene bloques de 512 bytes, comenzar a
+leer bloque a bloque, una vez qu encuentre el primer jpg, leer hasta que encuentre otro encabezado, debo cerrar el JPEG y abrir uno nuevo
+
+
+seudocodigo sugerido
+
+open memory card
+repeat until end of card
+	read 512 bytes into a buffer
+	if start of new jpg
+		if first JPEG
+		..
+		Else
+		   if already found JPEG
+			es el bloque siguiente de la imagen que estoy copiando hasta que vuelva a encontrar otro encabzad
+		...
+
+Close any remaining file
+
+
+si no es fin de fichero
+  Si hay un nuevo encabezado
+      si no es la primera vez
+            cierro fichero anterior
+        abro nuevo fichero
+        salvo dentro
+  else // no es encabezado
+      salvo dentro
+
+/ recover jpg file
+
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+// Number of bytes in .wav header
+const int Block = 512;
+
+int main(int argc, char *argv[])
+{
+    // Check command-line arguments
+    if (argc != 2)
+    {
+        printf("Usage: name of recover file\n");
+        return 1;
+    }
+
+    // Open files and determine scaling factor
+    FILE *pinput = fopen(argv[1], "r");
+    if (pinput == NULL)
+    {
+        printf("Could not open file.\n");
+        return 1;
+    }
+
+
+
+    int file_c = 0;
+
+    // TODO: Iterar sobre el fichero buscando imagenes
+    // leer bloque header (512) bytes
+
+    uint8_t buffer[Block];
+
+    fread(buffer, Block, 1, pinput);
+
+    // Copy input file header (44) bytes en output file
+
+
+    FILE *output = fopen(filename, "w");
+   if (output == NULL)
+    {
+      printf("Could not open file to save jpg.\n");
+     return 1;
+    }
+    fwrite(buffer,Block, 1, filename);
+
+    // TODO: Read samples from input file and write updated data to output file
+
+    // Define var to put 2 bytes
+
+
+
+    while (fread(&buffer, sizeof(Block), 1, pinput))
+    {
+        buffer[0] =
+        buffer[1] =
+        buffer[2] =
+        buffer[3] =
+       // write in a filename jpg
+        fwrite(&buffer, sizeof(Block), 1, filename);
+    }
+
+    // Close files
+    fclose(pinput);
+    fclose(output);
+}
+
+
