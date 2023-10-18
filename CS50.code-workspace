@@ -4,5 +4,7 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"C_Cpp_Runner.cCompilerPath": "C:\\progc\\mingw64\\bin\\gcc.exe"
+	}
 }
