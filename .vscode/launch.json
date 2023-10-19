@@ -1,21 +1,18 @@
 {
-    // Use IntelliSense para saber los atributos posibles.
-    // Mantenga el puntero para ver las descripciones de los existentes atributos.
-    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Bash en Windows: asociar",
+            "name": "C/C++: gcc.exe Compilar y depurar el archivo activo",
             "type": "cppdbg",
-            "request": "attach",
-            "program": "Escriba el nombre del programa; por ejemplo, ${workspaceFolder}/a.exe.",
-            "processId": "${command:pickRemoteProcess}",
-            "pipeTransport": {
-                "debuggerPath": "/usr/bin/gdb",
-                "pipeProgram": "${env:windir}\\system32\\bash.exe",
-                "pipeArgs": ["-c"],
-                "pipeCwd": ""
-            },
+            "request": "launch",
+            "program": "C:\\Users\\T\\Repositorios\\CS50\\Week5\\trie\\trie.exe",
+            "args": ["dog_names.txt"],
+            "stopAtEntry": false,
+            "cwd": "C:\\Users\\T\\Repositorios\\CS50\\Week5\\trie",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\progc\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Habilitar la impresión con sangría para gdb",
@@ -27,15 +24,8 @@
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
-            ]
-        },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug",
-            "program": "${workspaceFolder}/<executable file>",
-            "args": [],
-            "cwd": "${workspaceFolder}"
+            ],
+            "preLaunchTask": "C/C++: gcc.exe compilar archivo activo"
         }
     ]
 }

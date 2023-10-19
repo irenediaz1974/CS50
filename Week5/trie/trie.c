@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
     }
 
     // Add words to the trie
-    while (fscanf(infile, "%s", name) == 1) 
+    while (fscanf(infile, "%s", name) == 1)
     {
         node *cursor = root;
 
@@ -70,6 +70,7 @@ int main(int argc, char *argv[])
             int index = tolower(name[i]) - 'a';
             if (cursor->children[index] == NULL)
             {
+
                 // Make node
                 node *new = malloc(sizeof(node));
                 new->is_word = false;
@@ -109,35 +110,37 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
-    //Todo: gcc tries.c -o tries C:\Users\T\Repositorios\CS50\cs50.c
-    //
-    node *plist = root;
-    char string_name[20];
+      node *plist = root;
+      
+      char name_found[strlen(word)];
 
     for (int x = 0, le = strlen(word); x < le; x++)
     {
         int  letter = tolower(word[x]) - 'a'; // letter has word letters yo iterate
-        
-        // You can use the index for a letter to check if children[index] 
+
+        // You can use the index for a letter to check if children[index]
         //is a NULL pointer, meaning the word does not exist in the trie.
         if (plist->children[letter] != NULL)
-        { 
+        {
                 plist= plist->children[letter];
-                //check for the next letter in its children nodes.
-                string_name[x]=letter;
-        }     
+                //check for the next letter in its children nodes.   
+               // name_found[x] = word[x] ;
+                name_found [x]= word[x];
+               
+        }
+        
 
     }
+printf ("%s\n",name_found);
+if (strcmp(name_found,word)==0)
+{
+    return true;
+}
+else
+ {
+   return false;
+ }
 
-    if (strcmp( string_name,word)==0)
-    {
-        return true;
-    }
-    else
-    {
-       return false; 
-    }
-        return false;
 }
 
 // Unload trie from memory
@@ -152,7 +155,7 @@ bool unload(void)
 
 void unloader(node* current)
 {
-    
+
     // Iterate over all the children to see if they point to anything and go
     // there if they do point
     for (int i = 0; i < SIZE_OF_ALPHABET; i++)
