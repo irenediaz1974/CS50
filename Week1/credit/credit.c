@@ -1,0 +1,140 @@
+#include <cs50.h>
+#include <ctype.h>
+#include <math.h>
+#include <stdio.h>
+
+long get_number(void);
+bool cheksum_target(long target);
+string type_tarjet(long number);
+int num_digit(long number);
+int first_n = 0;
+
+int main(void)
+{
+    // Ask target number
+    long number = get_number();
+
+    // Calculate the checksum
+    bool target_real = cheksum_target(number);
+
+    // Type of target, visa, mastercard...
+    if (target_real)
+    {
+        string type_target = type_tarjet(number);
+
+        printf("%s\n", type_target);
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
+    return 0;
+}
+
+long get_number(void)
+{
+    // TODO
+    long n;
+    int size_number = 0;
+    do
+    {
+        n = get_long("Number: ");
+        size_number = num_digit(n);
+    }
+
+    while (size_number > 16 || size_number < 12);
+    return n;
+}
+
+bool cheksum_target(long number)
+{
+    int n_tar = 1;
+    int sum_right = 0;
+    int sum_left = 0;
+    long targ = number;
+
+    while (n_tar >= 0 && number != 0)
+    {
+        n_tar = number % 10;
+        sum_left = sum_left + n_tar;
+        number = number * 0.01;
+    }
+    n_tar = 1;
+    number = targ * 0.1;
+    while (n_tar >= 0 && number != 0)
+    {
+        n_tar = number % 10;
+        if ((2 * (n_tar)) > 9)
+        {
+            int n_digit = n_tar;
+            n_digit = 2 * (n_tar);
+
+            sum_right = sum_right + n_digit % 10;
+            n_digit = n_digit * 0.1;
+
+            sum_right = sum_right + n_digit % 10;
+        }
+        else
+        {
+            sum_right = sum_right + 2 * (n_tar);
+        }
+
+        number = number * 0.01;
+    }
+    if ((sum_right + sum_left) % 10 == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+string type_tarjet(long number)
+{
+
+    int size_number = 0;
+    int two_digit = 0;
+    string type_tar = "INVALID";
+
+    size_number = num_digit(number);
+
+    if (size_number == 16)
+    {
+        two_digit = number / 100000000000000;
+
+        if (two_digit >= 51 && two_digit <= 55)
+        {
+            type_tar = "MASTERCARD";
+        }
+    }
+    if (size_number == 15)
+    {
+        two_digit = number / 10000000000000;
+
+        if (two_digit == 34 || two_digit == 37)
+        {
+            type_tar = "AMEX";
+        }
+    }
+
+    if (first_n == 4)
+    {
+        type_tar = "VISA";
+    }
+
+    return type_tar;
+}
+
+int num_digit(long number)
+{
+    int i = 0;
+    while (number >= 1)
+    {
+        first_n = number;
+        number = number * 0.1;
+        i++;
+    }
+    return i;
+}

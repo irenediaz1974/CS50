@@ -1,0 +1,11 @@
+sort1 uses: Bubble
+
+How do you know?: faster in sorted50000.txt
+
+sort2 uses: Merge
+
+How do you know?: faster in ramdom50000.txt
+
+sort3 uses: Selection
+
+How do you know?: lowers time

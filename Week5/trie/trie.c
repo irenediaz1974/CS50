@@ -111,8 +111,7 @@ int main(int argc, char *argv[])
 bool check(char* word)
 {
       node *plist = root;
-      
-      char name_found[strlen(word)];
+      char name_found[20];
 
     for (int x = 0, le = strlen(word); x < le; x++)
     {
@@ -123,15 +122,13 @@ bool check(char* word)
         if (plist->children[letter] != NULL)
         {
                 plist= plist->children[letter];
-                //check for the next letter in its children nodes.   
-               // name_found[x] = word[x] ;
-                name_found [x]= word[x];
-               
+                //check for the next letter in its children nodes.
+                name_found[x] = word[x];
         }
-        
 
     }
-printf ("%s\n",name_found);
+
+
 if (strcmp(name_found,word)==0)
 {
     return true;

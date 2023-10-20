@@ -85,17 +85,10 @@ int main(int argc, char *argv[])
     }
 
     // Determine padding for scanlines
-    int padding = (4 (wi- dth * sizeof(RGBTRIPLE)) % 4) % 4;
+    int padding = (4 - (width * sizeof(RGBTRIPLE)) % 4) % 4;
 
     // Iterate over infile's scanlines
-    for (int i = 0; i < height; i++)
-    {
-        // Read row into pixel array
-        fread(image[i], sizeof(RGBTRIPLE), width, inptr);
-
-        // Skip over padding
-        fseek(inptr, padding, SEEK_CUR);
-    }
+  
 
     // Filter image
     switch (filter)
