@@ -1,0 +1,60 @@
+speller
+
+TODO
+
+- Abrir el fichero diccionario
+	
+	usar fopen (tratar retorno NULL , en cuyo caso la funcion debe devolver falso)
+	
+
+- leer una a una las cadenas del diccionario
+
+	fscanf(file, "%s", word)
+	fscanf retorna EOF una vez alcance el final del fichero
+
+- crear un nodo por cada palabra
+
+	node *n=malloc(sizeof(node)) (tratar NULL, retornar falso)
+	strcpy (n ->word, "Hello")
+	
+
+
+- obtener el valor hash de la palabra
+
+	usar la funcion hash
+	la funcion toma una cadena y retorna un index
+
+
+
+- insertar el nodo dentro de la tabla hash en esa direccion
+( buscar en  la lista vinculada para encontrar en que nodo insertar la palabra, en caso de que ya exista una)
+	
+	- recordar qu una hash table es un arreglo de listas vinculadas
+	estar seguro del orden de los punteros
+
+
+
+Load 
+- una cadena que deberas leer y tomar todos los datos para la tabla hash 
+
+como es la tabla hash??
+
+cada nodo tiene un valor y un puntero al nodo siguiente
+
+valor: char word[LENGHT + 1] -------> arreglo de letras
+
+struct node *next     --------> puntero al siguiente
+
+La tabla hash nos dara el primer nodo de la lista vinculada y luego se recorre por los punteros, hasta llegar al puntero null que seria el fin de la lista...
+* (es decir el primer elemento a insertar debe tener puntero null, luego el segundo apunta a ese puntero null, y asi sucesivamente)
+
+con node *table[N] estamos definiendo que la tabla es un arreglo de punteros a un nodo
+
+----- Crear un nodo nuevo
+node *n=malloc(sizeof(node))
+
+---- copiar la palabra al nodo
+strcpy (n ->word, "Hello")
+
+---- copiar el puntero
+n -->next= NULL
