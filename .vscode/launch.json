@@ -9,8 +9,8 @@
             "program": "C:\\Users\\T\\Repositorios\\CS50\\Week6\\world-cup\\tournament.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["C:\\Users\\T\\Repositorios\\CS50\\Week6\\world-cup\\2018m.csv"]
-        },
+            "pythonArgs": ["2018m.csv"]      
+        },   
         {
             "name": "C/C++: gcc.exe Compilar y depurar el archivo activo",
             "type": "cppdbg",
