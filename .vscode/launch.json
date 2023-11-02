@@ -1,12 +1,24 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
+        {
+            "name": "Python: archivo actual",
+            "type": "python",
+            "request": "launch",
+            "program": "C:\\Users\\T\\Repositorios\\CS50\\Week6\\world-cup\\tournament.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["C:\\Users\\T\\Repositorios\\CS50\\Week6\\world-cup\\2018m.csv"]
+        },
         {
             "name": "C/C++: gcc.exe Compilar y depurar el archivo activo",
             "type": "cppdbg",
             "request": "launch",
             "program": "C:\\Users\\T\\Repositorios\\CS50\\hash.exe",
-            "args": ["Maria"],
+            "args": [
+                "Maria"
+            ],
             "stopAtEntry": false,
             "cwd": "C:\\Users\\T\\Repositorios\\CS50",
             "environment": [],
