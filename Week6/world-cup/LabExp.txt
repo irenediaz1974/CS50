@@ -1,0 +1,72 @@
+
+ En main
+ Primero, en principal, lea los datos del equipo del archivo CSV en la memoria de su programa y agregue cada equipo a la lista de equipos.
+
+   -  El archivo a utilizar se proporcionará como argumento de línea de comandos. Puede acceder al nombre del archivo con sys.argv[1].
+    - Recuerde que puede abrir un archivo con open(nombre de archivo), donde nombre de archivo es una variable que almacena el nombre del archivo.
+   -  Una vez que tenga un archivo f, puede usar csv.DictReader(f) para obtener un "lector": un objeto en Python que puede recorrer para leer el archivo una fila a la vez, tratando cada fila como un diccionario.
+   - De forma predeterminada, todos los valores leídos del archivo serán cadenas. Así que asegúrese de convertir primero la calificación del equipo a un int (puede usar la función int en Python para hacer esto).
+   - En última instancia, agregue el diccionario de cada equipo a los equipos. La función llamada equipos.append(x) agregará x a la lista de equipos.
+   -  Recuerde que cada equipo debe tener un diccionario con el nombre del equipo y una calificación.
+
+
+A continuación, implemente la función simular_torneo. 
+Esta función debería aceptar como entrada una lista de equipos y debería simular rondas repetidamente hasta que te quedes con un equipo.
+ Luego, la función debería devolver el nombre de ese equipo.
+
+    Puede llamar a la función simular_ronda, que simula una sola ronda, acepta una lista de equipos como entrada y devuelve una lista de todos los ganadores.
+    Recuerde que si x es una lista, puede usar len(x) para determinar la longitud de la lista.
+    No debes asumir el número de equipos en el torneo, pero puedes asumir que será una potencia de 2.
+
+
+Finalmente, de regreso a la función principal, ejecute N simulaciones de torneos y realice un seguimiento de cuántas veces gana cada equipo en el diccionario de conteo.
+
+    Por ejemplo, si Uruguay ganó 2 torneos y Portugal ganó 3 torneos, entonces su diccionario de conteos debería ser {"Uruguay": 2, "Portugal": 3}.
+    Debes usar tu simular_torneo para simular cada torneo y determinar el ganador.
+    Recuerde que si counts es un diccionario, entonces una sintaxis como counts[team_name] = x asociará la clave almacenada en team_name con el valor almacenado en x.
+    Puede usar la palabra clave in en Python para verificar si un diccionario ya tiene una clave particular. Por ejemplo, si "Portugal" está en recuentos: comprobará si "Portugal" ya tiene un valor existente en el diccionario de recuentos.
+
+
+TODO
+
+- Completar funcion main
+
+-- con csv.DictReader leer los equipos desde el fichero csv.
+
+teams=[]
+filename=sys.argv[1]
+with open(filename) as f:
+	reader=csv.DictReader(f)
+	for team in reader:
+		team["rating"] = int( team["rating"]
+	teams.append(team)
+
+(esta funcion devuelve valores tipo string, hay que convertir a entero la calificacion)
+--
+--- en el archivo csv que se le suministra estan los datos de cada equipo, con ello se crea la lista teams= [ ] y se ordena , almacenando cada equipo en un diccionario equipo, calificacion.
+
+--- Almacenar cada team como diccionario en una lista de equipos ??????
+
+--- Luego se simulan N torneos con la funcion simulate_tournament
+
+Esta funcion, que debera ser recursiva simulando torneos almacenara las victorias en count
+--- Luego se crea counts={ } , donde estara el nombre del equipo y cuantos torneos gano.
+
+counts={}
+for i in range(N):
+	if winner in counts:
+		counts[winner] +=1
+	else
+		counts[winner]=1
+
+
+
+---- completar simulate_tournament
+
+while len(teams)> 1:
+	teams=simulate_round(teams)
+return teams[0]["team"]
+
+- usa la funcion simulate_round que acepta quien acepta una lista de equipos y retorna una lista de ganadores
+
+esta funcion se repite hasta que solo quede un equipo y devuelve el nombre del eqiopo ganador
