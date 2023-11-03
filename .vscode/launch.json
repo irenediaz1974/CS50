@@ -1,16 +1,13 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "name": "Python: archivo actual",
-            "type": "python",
+            "name": "Depurador de Python: Archivo actual",
+            "type": "debugpy",
             "request": "launch",
-            "program": "C:\\Users\\T\\Repositorios\\CS50\\Week6\\world-cup\\tournament.py",
-            "console": "integratedTerminal",
-            "justMyCode": true,
-            "args": ["2018m.csv"]      
-        },   
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
         {
             "name": "C/C++: gcc.exe Compilar y depurar el archivo activo",
             "type": "cppdbg",
