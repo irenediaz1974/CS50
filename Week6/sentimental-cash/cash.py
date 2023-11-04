@@ -2,7 +2,7 @@ from cs50 import get_float
 
 
 def main():
-    # Ask how many cents the customer is owed
+    # Ask how many dollars the customer is owed
     cents = get_dollars()
     # Calculate the number of quarters to give the customer
     quarters = calculate_quarters(cents)
@@ -26,19 +26,18 @@ def get_dollars():
         try:
             n = get_float("Change owed: ")
             if n > 0:
-                # n= n - int(n)
                 return n * 100
         except ValueError:
             print("Not a valid value")
 
 
 def calculate_quarters(cents):
-    quarters = int (cents / 25)
+    quarters = int(cents / 25)
     return quarters
 
 
 def calculate_dimes(cents):
-    dimes = int (cents / 10)
+    dimes = int(cents / 10)
     return dimes
 
 
