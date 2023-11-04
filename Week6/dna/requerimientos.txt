@@ -1,0 +1,49 @@
+DNA
+
+En un archivo llamado dna.py, implemente un programa que identifique a quién pertenece una secuencia de ADN.
+
+  1.-  El programa debe requerir como primer argumento de línea de comando el nombre de un archivo CSV que contenga los recuentos de STR para una lista de individuos y debe requerir como segundo argumento de línea de comando el nombre de un archivo de texto que contenga la secuencia de ADN a identificar.
+       a)  Si su programa se ejecuta con una cantidad incorrecta de argumentos de línea de comando, su programa debería imprimir un mensaje de error de su elección (con impresión). Si se proporciona la cantidad correcta de argumentos, puede asumir que el primer argumento es de hecho el nombre de un archivo CSV válido y que el segundo argumento es el nombre de un archivo de texto válido.
+
+2.-    Su programa debería abrir el archivo CSV y leer su contenido en la memoria.
+        a) Puede suponer que la primera fila del archivo CSV serán los nombres de las columnas. La primera columna será el nombre de la palabra y las columnas restantes serán las propias secuencias STR.
+3.- Su programa debería abrir la secuencia de ADN y leer su contenido en la memoria.
+
+4.- Para cada uno de los STR (desde la primera línea del archivo CSV), su programa debe calcular la serie más larga de repeticiones consecutivas del STR en la secuencia de ADN a identificar. Tenga en cuenta que hemos definido una función auxiliar para usted, long_match, que hará precisamente eso.
+5.- Si los recuentos de STR coinciden exactamente con cualquiera de las personas en el archivo CSV, su programa debería imprimir el nombre de la persona coincidente.
+        a) Puede suponer que los recuentos de STR no coincidirán con más de un individuo.
+        b) Si los recuentos de STR no coinciden exactamente con ninguno de los individuos en el archivo CSV, su programa debería imprimir No coincide.
+
+
+carpeta databases large.csv
+
+name,AGATC,TTTTTTCT,AATG,TCTAG,GATA,TATC,GAAA,TCTG
+Albus,15,49,38,5,14,44,14,12
+Cedric,31,21,41,28,30,9,36,44
+Draco,9,13,8,26,15,25,41,39
+Fred,37,40,10,6,5,10,28,8
+Ginny,37,47,10,23,5,48,28,23
+Hagrid,25,38,45,49,39,18,42,30
+Harry,46,49,48,29,15,5,28,40
+Hermione,43,31,18,25,26,47,31,36
+James,46,41,38,29,15,5,48,22
+Kingsley,7,11,18,33,39,31,23,14
+Lavender,22,33,43,12,26,18,47,41
+Lily,42,47,48,18,35,46,48,50
+Lucius,9,13,33,26,45,11,36,39
+Luna,18,23,35,13,11,19,14,24
+Minerva,17,49,18,7,6,18,17,30
+Neville,14,44,28,27,19,7,25,20
+Petunia,29,29,40,31,45,20,40,35
+Remus,6,18,5,42,39,28,44,22
+Ron,37,47,13,25,17,6,13,35
+Severus,29,27,32,41,6,27,8,34
+Sirius,31,11,28,26,35,19,33,6
+Vernon,26,45,34,50,44,30,32,28
+Zacharias,29,50,18,23,38,24,22,9
+
+small.csv
+name,AGATC,AATG,TATC
+Alice,2,8,3
+Bob,4,1,5
+Charlie,3,2,5
