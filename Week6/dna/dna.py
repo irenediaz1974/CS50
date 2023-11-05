@@ -4,7 +4,7 @@ import sys
 
 def main():
 
-    # TODO: Check for command-line usage
+    # TODO: Check for command-line usage 
 
     # TODO: Read database file into a variable
     
@@ -15,6 +15,20 @@ def main():
     # TODO: Check database for matching profiles
 
     return
+
+def check_arguments():
+    while True:
+        try:
+            database_name = sys.argv[3]
+            sequence_name = sys.argv[4]
+            return (database_name, sequence_name)
+        except ValueError:
+            print("Usage: python dna.py data.csv sequence.txt")
+    return database_name
+
+def Open_database(d):
+    reader=csv.DictReader(d)
+
 
 
 def longest_match(sequence, subsequence):
