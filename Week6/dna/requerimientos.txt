@@ -1,18 +1,19 @@
 DNA
 
-En un archivo llamado dna.py, implemente un programa que identifique a quién pertenece una secuencia de ADN.
+En un archivo llamado dna.py, implemente un programa que identifique a quiï¿½n pertenece una secuencia de ADN.
 
-  1.-  El programa debe requerir como primer argumento de línea de comando el nombre de un archivo CSV que contenga los recuentos de STR para una lista de individuos y debe requerir como segundo argumento de línea de comando el nombre de un archivo de texto que contenga la secuencia de ADN a identificar.
-       a)  Si su programa se ejecuta con una cantidad incorrecta de argumentos de línea de comando, su programa debería imprimir un mensaje de error de su elección (con impresión). Si se proporciona la cantidad correcta de argumentos, puede asumir que el primer argumento es de hecho el nombre de un archivo CSV válido y que el segundo argumento es el nombre de un archivo de texto válido.
+  1.-  El programa debe requerir como primer argumento de lï¿½nea de comando el nombre de un archivo CSV que contenga los recuentos de STR para una lista de individuos y debe requerir como segundo argumento de lï¿½nea de comando el nombre de un archivo de texto que contenga la secuencia de ADN a identificar.
+       a)  Si su programa se ejecuta con una cantidad incorrecta de argumentos de lï¿½nea de comando, su programa deberï¿½a imprimir un mensaje de error de su elecciï¿½n (con impresiï¿½n). Si se proporciona la cantidad correcta de argumentos, puede asumir que el primer argumento es de hecho el nombre de un archivo CSV vï¿½lido y que el segundo argumento es el nombre de un archivo de texto vï¿½lido.
 
-2.-    Su programa debería abrir el archivo CSV y leer su contenido en la memoria.
-        a) Puede suponer que la primera fila del archivo CSV serán los nombres de las columnas. La primera columna será el nombre de la palabra y las columnas restantes serán las propias secuencias STR.
-3.- Su programa debería abrir la secuencia de ADN y leer su contenido en la memoria.
+2.-    Su programa deberï¿½a abrir el archivo CSV y leer su contenido en la memoria.
+        a) Puede suponer que la primera fila del archivo CSV serï¿½n los nombres de las columnas.
+         La primera columna serï¿½ el nombre de la palabra y las columnas restantes serï¿½n las propias secuencias STR.
+3.- Su programa deberï¿½a abrir la secuencia de ADN y leer su contenido en la memoria.
 
-4.- Para cada uno de los STR (desde la primera línea del archivo CSV), su programa debe calcular la serie más larga de repeticiones consecutivas del STR en la secuencia de ADN a identificar. Tenga en cuenta que hemos definido una función auxiliar para usted, long_match, que hará precisamente eso.
-5.- Si los recuentos de STR coinciden exactamente con cualquiera de las personas en el archivo CSV, su programa debería imprimir el nombre de la persona coincidente.
-        a) Puede suponer que los recuentos de STR no coincidirán con más de un individuo.
-        b) Si los recuentos de STR no coinciden exactamente con ninguno de los individuos en el archivo CSV, su programa debería imprimir No coincide.
+4.- Para cada uno de los STR (desde la primera lï¿½nea del archivo CSV), su programa debe calcular la serie mï¿½s larga de repeticiones consecutivas del STR en la secuencia de ADN a identificar. Tenga en cuenta que hemos definido una funciï¿½n auxiliar para usted, long_match, que harï¿½ precisamente eso.
+5.- Si los recuentos de STR coinciden exactamente con cualquiera de las personas en el archivo CSV, su programa deberï¿½a imprimir el nombre de la persona coincidente.
+        a) Puede suponer que los recuentos de STR no coincidirï¿½n con mï¿½s de un individuo.
+        b) Si los recuentos de STR no coinciden exactamente con ninguno de los individuos en el archivo CSV, su programa deberï¿½a imprimir No coincide.
 
 
 carpeta databases large.csv
