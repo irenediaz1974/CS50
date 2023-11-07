@@ -1,0 +1,2 @@
+average energy, valence, and danceability 
+SELECT name, valence, danceability FROM songs WHERE energy > (SELECT AVG(energy) FROM songs ) ORDER BY valence, danceability DESC LIMIT 10;
