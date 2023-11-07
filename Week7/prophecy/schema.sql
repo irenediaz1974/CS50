@@ -1,10 +1,10 @@
-## RENAME TABLE CORRECT ORDER
-
-    Create new table
-    Copy data
-    Drop old table
-    Rename new into old 
-
+/* RENAME TABLE CORRECT ORDER
+    1- Create new table
+    2- Copy data
+    3- Drop old table
+    4- Rename new into old
+*/
+BEGIN TRANSACTION;
 
 CREATE TABLE students_t (
     id INTEGER,
@@ -13,10 +13,12 @@ CREATE TABLE students_t (
 );
 
 INSERT INTO students_t (student_name)
-        SELECT student_name 
+        SELECT student_name
         from students
         ORDER BY student_name ASC;
 
+ALTER TABLE students RENAME TO students_copy;
+ALTER TABLE students_t RENAME TO students;
 
 
 CREATE TABLE houses (
@@ -30,6 +32,7 @@ CREATE TABLE assignments (
     id INTEGER PRIMARY KEY,
     house_id INTEGER,
     students_id INTEGER,
-    FOREING KEY(house_id) REFERENCES houses(id)
-    FOREING KEY(students_id) REFERENCES students(id)
+    FOREIGN KEY(house_id) REFERENCES houses(id)
+    FOREIGN KEY(students_id) REFERENCES students(id)
 );
+COMMIT;
