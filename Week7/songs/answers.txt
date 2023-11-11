@@ -1,0 +1,46 @@
+
+In kaggle:
+key: The key the track is in.
+In kaggle valence correspond mood, low valence correspond to sad
+
+--- Answer: On average the songs on the list have low valence, high danceability, and medium energy. But I need to know the data better because it might be better to search for the most played song, for example.
+    I couldn't find that, because the time supplied is the length of the song.
+
+From the site:
+    Purple: This aura color pairs well with passionate music listeners. Purple auras tune in to get amped up, entertained, and moving while they navigate the twists and turns of their day.
+    Green: Calm, analytical, and introspective are the traits that describe a green aura. These listeners gravitate toward complex music to tame their fast-moving minds.
+    Pink: Often described as the hopeless romantics of the aura spectrum, pinks view the world with a sense of optimistic, childlike wonder.
+    Orange: Oranges are the rebellious and bold type. They share a need for high-energy, confidence-boosting sounds.
+    Yellow: Yellows like their music to align them to the goals of their day, fueling their need for focus, motivation, and self improvement all while reducing any nerves that could get in the way.
+    Blue: Blues are wistful or emotional, and this hue reflects listeners who seek out music to feel their feelings out loud.
+
+    Spotify Wrapped typically includes the five musicians a user has listened to most often, the songs which they have listened to most, and their favourite music genres.
+    Producers of content on the platform also have access to a version of Spotify Wrapped,
+    which includes the number of times their content has been streamed that year.
+     In addition to individualized data, Spotify Wrapped also includes information
+     about activity on the Spotify platform as a whole.
+     While Spotify Wrapped is commonly referred to as an annual collection of data,
+     only activity from January 1 to somewhere around October/November is counted for any given year.
+
+     Comments: The five musicians a user has listened to most often
+
+
+      SELECT songs.key,songs.name, songs.valence, artists.name
+                 FROM songs JOIN artists ON  artist_id=artists.id WHERE songs.energy > (SELECT AVG(energy) FROM songs)
+                 AND songs.valence > (SELECT AVG(valence) FROM songs) AND songs.danceability > (SELECT AVG(danceability) FROM songs)
+                 ORDER BY KEY ASC LIMIT 5;
+
+    In kaggle valence correspond mood, low valence correspond to sad
+    SELECT AVG(valence) FROM songs;
+    0.48
+    SELECT AVG(danceability) FROM songs;
+    0.7
+    SELECT AVG(energy) FROM songs;
+    0.65
+    SELECT COUNT(*) FROM songs WHERE songs.valence > (SELECT AVG(valence) FROM songs);
+    Rpta: 49
+    SELECT name,valence, key FROM songs WHERE songs.valence > (SELECT AVG(valence) FROM songs) ORDER BY key LIMIT 5;
+    Rpta: Promises, In My Blood....
+    SELECT * FROM songs WHERE danceability > 0.75 AND energy > 0.75 AND valence > 0.75;
+    Rpta: 4 songs
+
