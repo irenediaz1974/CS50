@@ -2,11 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Depurador de Python: Archivo actual",
-            "type": "debugpy",
+            "name": "Python: archivo actual",
+            "type": "python",
             "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": "${command:pickArgs}"
         },
         {
             "name": "C/C++: gcc.exe Compilar y depurar el archivo activo",
