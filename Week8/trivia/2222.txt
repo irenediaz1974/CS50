@@ -1,0 +1,35 @@
+ Parte 1. TODO
+
+What is the approximate ratio of people to sheep in New Zealand?
+
+5 botones
+
+- 6 people per 1 sheep
+- 3 people per 1 sheep
+- 1 person per 1 sheep
+- 1 person per 3 sheep
+- 1 person per 6 sheep
+
+Usar h3 heading para la pregunta
+
+usar un boton para cada opcion de pregunta
+
+cuando el boton incorrecto se click el boton debera ponerse rojo y un texto debera aparecer cerca de la pregunta y decir "Incorret"
+
+cuando se proporciona la respuesta correcta el boton debera ponerse verde y debera aparecer texto cerca de la pregunta "Correct!"
+
+
+Parte 2: TODO
+
+adicionar una pregunta de libre respuesta, usar el h3 para la pregunta
+se usara un input para la respuesta y un button para confirmar la respuesta
+
+Con javascript
+cuando la respuesta sea incorrecta, el campo texto debe ponerse en rojo y el texto que debe aparecer debe decir Incorrect
+cuando se proporciona la respuesta correcta el boton debera ponerse verde y debera aparecer texto cerca de la pregunta "Correct!"
+
+
+Usar en javascript
+
+document.querySelector
+addEventListener
