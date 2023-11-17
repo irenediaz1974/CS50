@@ -1,0 +1,83 @@
+Hay varias fuentes en línea donde puedes encontrar imágenes de dominio público o con licencias Creative Commons que puedes usar en tu sitio web. Algunas de estas fuentes incluyen:
+
+    Wikimedia Commons: Un repositorio de imágenes y otros medios de comunicación de dominio público y con licencias Creative Commons.
+
+    Unsplash: Un sitio web donde fotógrafos profesionales y aficionados suben imágenes de alta calidad bajo la licencia Unsplash, que permite el uso gratuito con pocas restricciones.
+
+    Pixabay: Similar a Unsplash, Pixabay ofrece imágenes de alta calidad bajo una licencia que permite el uso gratuito con pocas restricciones.
+
+Recuerda siempre verificar la licencia de cualquier imagen que uses para asegurarte de que tienes permiso para usarla en tu sitio web. Además, es una buena práctica dar crédito al autor de la imagen cuando sea posible.
+you
+
+que parametros debe tener la imagen para que sea facil de cargar la pagina?
+ddb
+
+Para que una imagen sea fácil de cargar en una página web, debes tener en cuenta los siguientes factores:
+
+    Tamaño del archivo: Las imágenes más pequeñas se cargan más rápido. Intenta mantener el tamaño del archivo de la imagen por debajo de 100-200 KB para las imágenes más grandes en tu sitio, y mucho menos para las imágenes más pequeñas.
+
+    Dimensiones de la imagen: Las imágenes deben tener el tamaño adecuado para el lugar donde se van a mostrar en tu sitio web. No necesitas una imagen de 3000px de ancho si solo se va a mostrar a 300px de ancho en tu sitio.
+
+    Formato de la imagen: Los formatos de imagen como JPEG son buenos para las fotografías, mientras que los formatos como PNG son buenos para las imágenes con áreas de color sólido. El formato WebP también puede proporcionar una buena calidad de imagen con tamaños de archivo más pequeños, pero no todos los navegadores lo admiten.
+
+    Optimización de la imagen: Hay herramientas en línea y programas que pueden ayudarte a optimizar tus imágenes para la web, reduciendo el tamaño del archivo sin una pérdida notable de calidad.
+
+Recuerda que la velocidad de carga de tu sitio web es importante para la experiencia del usuario, por lo que es una buena idea optimizar tus imágenes tanto como sea posible.
+
+
+Claro, aquí te dejo algunos ejemplos de herramientas en línea y programas que puedes usar para optimizar tus imágenes:
+
+    TinyPNG: Es una herramienta en línea que comprime tus imágenes PNG y JPEG para reducir su tamaño de archivo sin perder mucha calidad.
+
+    ImageOptim: Es una aplicación para Mac que elimina los metadatos innecesarios de las imágenes y las comprime para reducir su tamaño de archivo.
+
+    Kraken.io: Es una herramienta en línea que ofrece optimización de imágenes y varias opciones de compresión.
+
+    Squoosh: Es una aplicación web desarrollada por Google que te permite comprimir y cambiar el formato de tus imágenes.
+
+Recuerda siempre hacer una copia de seguridad de tus imágenes originales antes de comprimirlas, en caso de que no estés satisfecho con los resultados de la compresión.
+
+Aquí tienes algunos consejos adicionales para desarrollar tu sitio web para el Problem Set 8:
+
+    Planificación: Antes de comenzar a codificar, haz un bosquejo de cómo quieres que se vea tu sitio web y qué funcionalidades quieres que tenga. Esto te ayudará a tener una visión clara de lo que estás construyendo.
+
+    Diseño Responsivo: Asegúrate de que tu sitio web se vea bien y funcione correctamente en todos los tamaños de pantalla. Puedes lograr esto utilizando un diseño flexible y consultas de medios CSS.
+
+    Navegabilidad: Asegúrate de que los usuarios puedan encontrar fácilmente lo que buscan en tu sitio. Una navegación clara y una estructura de sitio lógica pueden ayudar con esto.
+
+    Validación: Asegúrate de validar tu HTML y CSS para asegurarte de que no haya errores. Hay herramientas en línea que puedes usar para hacer esto.
+
+    Pruebas: Prueba tu sitio en diferentes navegadores y dispositivos para asegurarte de que funcione correctamente en todas partes.
+
+    Comentarios: Asegúrate de comentar tu código. Esto te ayudará a entender lo que hiciste si necesitas volver a visitarlo más tarde, y también ayudará a cualquier otra persona que esté leyendo tu código.
+
+Recuerda, el objetivo es aprender y mejorar tus habilidades, así que no te preocupes si no es perfecto. ¡Buena suerte!
+
+Las consultas de medios CSS son una técnica utilizada en diseño web responsivo para aplicar diferentes estilos CSS a diferentes dispositivos basándose en características como el tamaño de la pantalla, la orientación (vertical u horizontal) y la resolución de la pantalla.
+
+Por ejemplo, puedes tener un conjunto de estilos que solo se aplican cuando la pantalla tiene menos de 600px de ancho, como en este ejemplo:
+
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+En este caso, el fondo del cuerpo se cambiará a lightblue solo cuando el ancho de la ventana del navegador sea de 600px o menos.
+
+Existen varios sitios web donde puedes encontrar plantillas gratuitas o de pago para tu sitio web. Algunos de estos incluyen:
+
+    BootstrapMade: Ofrece plantillas gratuitas y premium que utilizan el marco de trabajo Bootstrap.
+
+    HTML5 UP: Ofrece plantillas gratuitas y responsivas que puedes descargar y personalizar.
+
+    Templated: Similar a HTML5 UP, ofrece una variedad de plantillas gratuitas.
+
+    W3Layouts: Ofrece una amplia gama de plantillas gratuitas y premium.
+
+    ThemeForest: Parte de Envato Market, ofrece una amplia gama de plantillas premium.
+
+Recuerda que si eliges usar una plantilla, aún debes entender cómo funciona el código y personalizarlo para que se ajuste a tus necesidades.
+
+
+Envato Market es una colección de mercados temáticos donde los creadores venden sus productos digitales, incluyendo temas, música, efectos de sonido, imágenes y más. Los mercados individuales son ThemeForest para temas de WordPress, CodeCanyon para código, VideoHive para secuencias de video, AudioJungle para efectos de sonido y música, GraphicRiver para gráficos, PhotoDune para fotografía y 3DOcean para modelos 3D y materiales. Es una plataforma muy utilizada en el mundo del diseño y desarrollo web.
