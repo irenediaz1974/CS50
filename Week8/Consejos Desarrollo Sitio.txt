@@ -41,6 +41,16 @@ Aquí tienes algunos consejos adicionales para desarrollar tu sitio web para el P
 
     Planificación: Antes de comenzar a codificar, haz un bosquejo de cómo quieres que se vea tu sitio web y qué funcionalidades quieres que tenga. Esto te ayudará a tener una visión clara de lo que estás construyendo.
 
+ existen varias herramientas en línea que pueden ayudarte a planificar y esbozar un sitio web. 
+
+Gratis: ¡Hola! Sí, existen herramientas gratuitas en línea que puedes usar para planificar y esbozar un sitio web. Algunas de estas incluyen:
+
+    Wireframe.cc: Es una herramienta de wireframing en línea simple y gratuita.
+    Figma: Es una herramienta de diseño de interfaz de usuario que también permite el wireframing. Tiene una opción gratuita con ciertas limitaciones.
+    MockFlow: Ofrece una versión gratuita limitada de su herramienta de wireframing.
+
+De pago: Algunas de estas herramientas son Balsamiq, Moqups, y Sketch. Estas herramientas te permiten crear wireframes o prototipos de tu sitio web, lo que puede ser muy útil para visualizar la estructura y el diseño de tu sitio antes de comenzar a codificar. Sin embargo, recuerda que estas herramientas son solo una guía y que la implementación final dependerá de tus habilidades de codificación y los requisitos de tu proyecto.
+
     Diseño Responsivo: Asegúrate de que tu sitio web se vea bien y funcione correctamente en todos los tamaños de pantalla. Puedes lograr esto utilizando un diseño flexible y consultas de medios CSS.
 
     Navegabilidad: Asegúrate de que los usuarios puedan encontrar fácilmente lo que buscan en tu sitio. Una navegación clara y una estructura de sitio lógica pueden ayudar con esto.
@@ -81,3 +91,96 @@ Recuerda que si eliges usar una plantilla, aún debes entender cómo funciona el c
 
 
 Envato Market es una colección de mercados temáticos donde los creadores venden sus productos digitales, incluyendo temas, música, efectos de sonido, imágenes y más. Los mercados individuales son ThemeForest para temas de WordPress, CodeCanyon para código, VideoHive para secuencias de video, AudioJungle para efectos de sonido y música, GraphicRiver para gráficos, PhotoDune para fotografía y 3DOcean para modelos 3D y materiales. Es una plataforma muy utilizada en el mundo del diseño y desarrollo web.
+
+
+Ideas:
+
+LINK
+Poner un link hacia paginas de wikipdia o alguna pagina que trate el tema:
+ <a href="https://www.w3schools.com">This is a link</a> 
+
+IMAGENES
+
+HTML images are defined with the <img> tag, the source file (src), alternative text (alt), width, and height are provided as attributes:
+ <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> 
+2. Relative URL - Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: src="img_girl.jpg". If the URL begins with a slash, it will be relative to the domain. Example: src="/images/img_girl.jpg".
+
+BOTONES
+
+<h2>HTML Buttons</h2>
+<p>HTML buttons are defined with the button tag:</p>
+
+<button>Click me</button>
+
+
+LISTAS
+
+<body>
+
+<h2>An Unordered HTML List</h2>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>  
+
+<h2>An Ordered HTML List</h2>
+
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol> 
+
+</body>
+
+The lang Attribute
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+HTML Horizontal Rules
+
+The <hr> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.
+
+The <hr> element is used to separate content (or define a change) in an HTML page:
+Example
+<h1>This is heading 1</h1>
+<p>This is some text.</p>
+<hr>
+<h2>This is heading 2</h2>
+<p>This is some other text.</p>
+<hr> 
+
+
+
+HTML Line Breaks
+
+The HTML <br> element defines a line break.
+
+Use <br> if you want a line break (a new line) without starting a new paragraph:
+Example
+<p>This is<br>a paragraph<br>with line breaks.</p> 
+
+
+Solution - The HTML <pre> Element
+
+The HTML <pre> element defines preformatted text.
+
+The text inside a <pre> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:
+Example
+<pre>
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre> 
+
+
+
