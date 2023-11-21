@@ -1,1 +1,45 @@
-{"payload":{"allShortcutsEnabled":true,"fileTree":{"labs8/homepage":{"items":[{"name":"curriculum.html","path":"labs8/homepage/curriculum.html","contentType":"file"},{"name":"hobby.html","path":"labs8/homepage/hobby.html","contentType":"file"},{"name":"index.html","path":"labs8/homepage/index.html","contentType":"file"},{"name":"portfolio.html","path":"labs8/homepage/portfolio.html","contentType":"file"},{"name":"styles.css","path":"labs8/homepage/styles.css","contentType":"file"}],"totalCount":5},"labs8":{"items":[{"name":"homepage","path":"labs8/homepage","contentType":"directory"},{"name":"redo","path":"labs8/redo","contentType":"directory"},{"name":"trivia","path":"labs8/trivia","contentType":"directory"}],"totalCount":3},"":{"items":[{"name":".vscode","path":".vscode","contentType":"directory"},{"name":"labs1","path":"labs1","contentType":"directory"},{"name":"labs2","path":"labs2","contentType":"directory"},{"name":"labs3","path":"labs3","contentType":"directory"},{"name":"labs4","path":"labs4","contentType":"directory"},{"name":"labs5","path":"labs5","contentType":"directory"},{"name":"labs6","path":"labs6","contentType":"directory"},{"name":"labs7","path":"labs7","contentType":"directory"},{"name":"labs8","path":"labs8","contentType":"directory"},{"name":".devcontainer.json","path":".devcontainer.json","contentType":"file"}],"totalCount":10}},"fileTreeProcessingTime":5.707450000000001,"foldersToFetch":[],"reducedMotionEnabled":"system","repo":{"id":678330079,"defaultBranch":"main","name":"123865370","ownerLogin":"code50","currentUserCanPush":true,"isFork":false,"isEmpty":false,"createdAt":"2023-08-14T05:53:16.000-04:00","ownerAvatar":"https://avatars.githubusercontent.com/u/89367332?v=4","public":false,"private":true,"isOrgOwned":true},"symbolsExpanded":false,"treeExpanded":true,"refInfo":{"name":"main","listCacheKey":"v0:1692006799.0","canEdit":true,"refType":"branch","currentOid":"6535f1a3d54bb37e81c730df2f3a771ca59d852f"},"path":"labs8/homepage/styles.css","currentUser":{"id":123865370,"login":"irenediaz1974","userEmail":"irenediazcuba@gmail.com"},"blob":{"rawLines":["h1 {","    font-family: 'Montserrat', sans-serif;","    font-size: 48px;","}","","#myNavbar .nav-link {","    color: #fff !important;","    margin-right: 12px; /* Ajusta este valor a tu gusto */","}","@keyframes colorchange {","    0%   {background-color: gray;}","    50%  {background-color: blue;}","    100% {background-color: green;}","  }","","  .mybook {","    animation-name: colorchange;","    animation-duration: 5s;","    animation-iteration-count: infinite;","  }","","  .contenedor {","    display: flex;","  }"],"stylingDirectives":[[{"start":0,"end":2,"cssClass":"pl-ent"}],[{"start":4,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":29,"cssClass":"pl-s"},{"start":29,"end":30,"cssClass":"pl-kos"}],[{"start":4,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":19,"cssClass":"pl-c1"},{"start":17,"end":19,"cssClass":"pl-smi"}],[],[],[{"start":0,"end":1,"cssClass":"pl-kos"},{"start":1,"end":9,"cssClass":"pl-c1"},{"start":11,"end":19,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":15,"cssClass":"pl-pds"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":16,"end":26,"cssClass":"pl-k"}],[{"start":4,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"},{"start":18,"end":22,"cssClass":"pl-c1"},{"start":20,"end":22,"cssClass":"pl-smi"},{"start":24,"end":58,"cssClass":"pl-c"}],[],[{"start":0,"end":10,"cssClass":"pl-k"}],[{"start":4,"end":6,"cssClass":"pl-c1"},{"start":5,"end":6,"cssClass":"pl-smi"},{"start":10,"end":26,"cssClass":"pl-c1"},{"start":26,"end":27,"cssClass":"pl-kos"}],[{"start":4,"end":7,"cssClass":"pl-c1"},{"start":6,"end":7,"cssClass":"pl-smi"},{"start":10,"end":26,"cssClass":"pl-c1"},{"start":26,"end":27,"cssClass":"pl-kos"}],[{"start":4,"end":8,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-smi"},{"start":10,"end":26,"cssClass":"pl-c1"},{"start":26,"end":27,"cssClass":"pl-kos"}],[],[],[{"start":3,"end":9,"cssClass":"pl-c1"}],[{"start":4,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"}],[{"start":4,"end":22,"cssClass":"pl-c1"},{"start":22,"end":23,"cssClass":"pl-kos"},{"start":24,"end":26,"cssClass":"pl-c1"},{"start":25,"end":26,"cssClass":"pl-smi"}],[{"start":4,"end":29,"cssClass":"pl-c1"},{"start":29,"end":30,"cssClass":"pl-kos"}],[],[],[{"start":3,"end":13,"cssClass":"pl-c1"}],[{"start":4,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"}],[]],"csv":null,"csvError":null,"dependabotInfo":{"showConfigurationBanner":null,"configFilePath":null,"networkDependabotPath":"/code50/123865370/network/updates","dismissConfigurationNoticePath":"/settings/dismiss-notice/dependabot_configuration_notice","configurationNoticeDismissed":false,"repoAlertsPath":"/code50/123865370/security/dependabot","repoSecurityAndAnalysisPath":"/code50/123865370/settings/security_analysis","repoOwnerIsOrg":true,"currentUserCanAdminRepo":false},"displayName":"styles.css","displayUrl":"https://github.com/code50/123865370/blob/main/labs8/homepage/styles.css?raw=true","headerInfo":{"blobSize":"476 Bytes","deleteInfo":{"deleteTooltip":"Delete this file"},"editInfo":{"editTooltip":"Edit this file"},"ghDesktopPath":"x-github-client://openRepo/https://github.com/code50/123865370?branch=main&filepath=labs8%2Fhomepage%2Fstyles.css","gitLfsPath":null,"onBranch":true,"shortPath":"a603cb8","siteNavLoginPath":"/login?return_to=https%3A%2F%2Fgithub.com%2Fcode50%2F123865370%2Fblob%2Fmain%2Flabs8%2Fhomepage%2Fstyles.css","isCSV":false,"isRichtext":false,"toc":null,"lineInfo":{"truncatedLoc":"24","truncatedSloc":"21"},"mode":"file"},"image":false,"isCodeownersFile":null,"isPlain":false,"isValidLegacyIssueTemplate":false,"issueTemplateHelpUrl":"https://docs.github.com/articles/about-issue-and-pull-request-templates","issueTemplate":null,"discussionTemplate":null,"language":"CSS","languageID":50,"large":false,"loggedIn":true,"newDiscussionPath":"/code50/123865370/discussions/new","newIssuePath":"/code50/123865370/issues/new","planSupportInfo":{"repoIsFork":null,"repoOwnedByCurrentUser":null,"requestFullPath":"/code50/123865370/blob/main/labs8/homepage/styles.css","showFreeOrgGatedFeatureMessage":null,"showPlanSupportBanner":null,"upgradeDataAttributes":null,"upgradePath":null},"publishBannersInfo":{"dismissActionNoticePath":"/settings/dismiss-notice/publish_action_from_dockerfile","dismissStackNoticePath":"/settings/dismiss-notice/publish_stack_from_file","releasePath":"/code50/123865370/releases/new?marketplace=true","showPublishActionBanner":false,"showPublishStackBanner":false},"rawBlobUrl":"https://github.com/code50/123865370/raw/main/labs8/homepage/styles.css","renderImageOrRaw":false,"richText":null,"renderedFileInfo":null,"shortPath":null,"tabSize":8,"topBannersInfo":{"overridingGlobalFundingFile":false,"globalPreferredFundingPath":null,"repoOwner":"code50","repoName":"123865370","showInvalidCitationWarning":false,"citationHelpUrl":"https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files","showDependabotConfigurationBanner":null,"actionsOnboardingTip":null},"truncated":false,"viewable":true,"workflowRedirectUrl":null,"symbols":{"timedOut":false,"notAnalyzed":true,"symbols":[]}},"copilotInfo":{"documentationUrl":"https://docs.github.com/copilot/overview-of-github-copilot/about-github-copilot-for-individuals","notices":{"codeViewPopover":{"dismissed":false,"dismissPath":"/settings/dismiss-notice/code_view_copilot_popover"}},"userAccess":{"accessAllowed":false,"hasSubscriptionEnded":true,"orgHasCFBAccess":false,"userHasCFIAccess":false,"userHasOrgs":false,"userIsOrgAdmin":false,"userIsOrgMember":false,"business":null,"featureRequestInfo":{"showFeatureRequest":true,"alreadyRequested":false,"featureName":"copilot_for_business","requestPath":"/orgs/code50/member_feature_request"}}},"copilotAccessAllowed":false,"csrf_tokens":{"/code50/123865370/branches":{"post":"Z6nqrv8xpxyXS3GbJrhMiSCoqO-9AaAJeE6QxKqoUJAUY2LbTR-82WrCnXCrHJep_mpC2xffM9tFGP2UeqmeYw"},"/repos/preferences":{"post":"YYBC5Y_-O7rkkcUjh-3NTpx8gAC8OsU7WX2RZGmMU4ohAR-5tgA7MUJvY8mzeHCb9PpA7axoAh5njjGVs-litQ"}}},"title":"123865370/labs8/homepage/styles.css at main · code50/123865370"}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+}
+
+#myNavbar .nav-link {
+    color: #fff !important;
+    margin-right: 12px; /* Ajusta este valor a tu gusto */
+}
+@keyframes colorchange {
+    0%   {background-color: gray;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+  .mybook {
+    animation-name: colorchange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  .contenedor {
+    display: flex;
+  }
+
+  .carousel-inner {
+    max-height: 1000px;
+  }
+
+.carousel-caption h2,
+.carousel-caption h5,
+.carousel-caption p {
+color: rgb(8, 8, 8);
+}
+
+h1,h3 {
+    text-align: left;
+    color: rgb(79, 100, 30);
+}
+
+h6 {
+  text-align: right;
+  color: rgb(79, 100, 30);
+  font-weight: bold;
+}
