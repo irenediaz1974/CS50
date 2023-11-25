@@ -1,6 +1,21 @@
 ﻿h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    font-size: 30px;
+    color: rgb(26, 32, 11);
+    font-weight: bold;
+}
+
+h1,h3 {
+  text-align: left;
+  font-size: 30px;
+  color: rgb(79, 100, 30);
+}
+
+h6 {
+text-align: right;
+color: rgb(79, 100, 30);
+font-weight: bold;
 }
 
 #myNavbar .nav-link {
@@ -33,17 +48,7 @@
 color: rgb(8, 8, 8);
 }
 
-h1,h3 {
-    text-align: left;
-    font-size: 30px;
-    color: rgb(79, 100, 30);
-}
 
-h6 {
-  text-align: right;
-  color: rgb(79, 100, 30);
-  font-weight: bold;
-}
 
 .banner {
   background-color: #f0f0f0;
@@ -80,7 +85,7 @@ h6 {
 }
 
 footer {
-  font-family: "Times New Roman", Times, serif;
+  font-family:'Times New Roman', Times, serif;
   text-align: right;
   font-style: italic;
   font-weight: bold;
