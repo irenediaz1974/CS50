@@ -1,11 +1,11 @@
-h1 {
+﻿h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
 }
 
 #myNavbar .nav-link {
     color: #fff !important;
-    margin-right: 12px; /* Ajusta este valor a tu gusto */
+    margin-right: 16px;
 }
 @keyframes colorchange {
     0%   {background-color: gray;}
@@ -35,6 +35,7 @@ color: rgb(8, 8, 8);
 
 h1,h3 {
     text-align: left;
+    font-size: 30px;
     color: rgb(79, 100, 30);
 }
 
@@ -43,3 +44,92 @@ h6 {
   color: rgb(79, 100, 30);
   font-weight: bold;
 }
+
+.banner {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: rgb(79, 100, 30)
+
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 40px;
+  text-align: center
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+/* Estilos para la sesion texto de la pagina hobby */
+#texto {
+  display: flex;
+}
+#texto .column {
+  flex: 1;
+  margin: 10px;
+  text-align: justify;
+}
+#texto h6 {
+  text-align: center;
+}
+
+footer {
+  font-family: "Times New Roman", Times, serif;
+  text-align: right;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(79, 100, 30);
+  margin-top: 20px;
+  background-color: #f0f0f0;
+}
+
+
+/* Estilos agregados de la plantilla que tome del sitio del tutorial  */
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .menu {
+      float: left;
+      width: 20%;
+      text-align: center;
+    }
+
+    .menu a {
+      background-color: #e5e5e5;
+      padding: 8px;
+      margin-top: 7px;
+      display: block;
+      width: 100%;
+      color: black;
+      text-align: justify;
+    }
+
+    .main {
+      float: left;
+      width: 60%;
+      padding: 0 20px;
+    }
+
+    .right {
+      background-color: #e5e5e5;
+      float: left;
+      width: 20%;
+      padding: 15px;
+      margin-top: 7px;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 620px) {
+      /* For mobile phones: */
+      .menu, .main, .right {
+        width: 100%;
+      }
+    }

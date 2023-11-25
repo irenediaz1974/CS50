@@ -1,0 +1,957 @@
+RESUMEN
+
+<br> 	none 	none
+Note: Some HTML elements have no content (like the <br> element). These elements are called empty elements. Empty elements do not have an end tag!
+
+ <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> 
+
+The <a> tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:
+ <a href="https://www.w3schools.com">Visit W3Schools</a> 
+
+style a parrafo 
+<p style="color:red;">This is a red paragraph.</p> 
+
+
+The title Attribute
+
+The title attribute defines some extra information about an element.
+
+-- Hacer un TOOLTIP--
+
+The value of the title attribute will be displayed as a tooltip when you mouse over the element:
+
+ <p title="I'm a tooltip">This is a paragraph.</p> 
+
+--- heading size --
+
+<h1 style="font-size:60px;">Heading 1</h1>-
+
+-- HTML Horizontal Rules
+
+The <hr> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.
+
+The <hr> element is used to separate content (or define a change) in an HTML page:
+
+
+-- HTML Line Breaks
+
+The HTML <br> element defines a line break.
+
+Use <br> if you want a line break (a new line) without starting a new paragraph:
+
+ <p>This is<br>a paragraph<br>with line breaks.</p> 
+
+-- Un poema
+
+The HTML <pre> Element
+
+The HTML <pre> element defines preformatted text.
+
+ <pre>
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre> 
+
+
+
+--- Estilos:
+
+Tienen el formato: 
+		
+		<tagname style="property:value;">
+
+---BACKGROUND COLOR>
+
+ejemplo 1:
+
+ <body style="background-color:powderblue;">
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body> 
+
+ejemplo 2:
+
+ <body>
+
+<h1 style="background-color:powderblue;">This is a heading</h1>
+<p style="background-color:tomato;">This is a paragraph.</p>
+
+</body> 
+
+--TEXT COLOR
+
+ejemplo: 
+
+ <h1 style="color:blue;">This is a heading</h1>
+<p style="color:red;">This is a paragraph.</p> 
+
+
+--FONTS
+
+-- se define una font-family
+
+
+ <h1 style="font-family:verdana;">This is a heading</h1>
+<p style="font-family:courier;">This is a paragraph.</p> 
+
+-- TEXT SIZE
+
+ <h1 style="font-size:300%;">This is a heading</h1>
+<p style="font-size:160%;">This is a paragraph.</p> 
+
+-- TEXT ALIGNMENT
+
+ <h1 style="text-align:center;">Centered Heading</h1>
+<p style="text-align:center;">Centered paragraph.</p> 
+
+
+--FORMATO --
+
+HTML Formatting Elements
+
+Formatting elements were designed to display special types of text:
+
+    <b> - Bold text
+    <strong> - Important text
+    <i> - Italic text
+    <em> - Emphasized text
+    <mark> - Marked text
+    <small> - Smaller text
+    <del> - Deleted text
+    <ins> - Inserted text
+    <sub> - Subscript text
+    <sup> - Superscript text
+
+HTML <b> and <strong> Elements
+
+The HTML <b> element defines bold text, without any extra importance.
+
+ <strong>This text is important!</strong> 
+
+ <em>This text is emphasized</em> 
+<small>This is some smaller text.</small>
+
+- MARK (resaltar texto)
+<p>Do not forget to buy <mark>milk</mark> today.</p>
+
+The HTML <del> element defines text that has been deleted from a document. Browsers will usually strike a line through deleted text:
+<p>My favorite color is <del>blue</del> red.</p>
+
+The HTML <ins> element defines a text that has been inserted into a document. Browsers will usually underline inserted text:
+
+<p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+
+<p>This is <sub>subscripted</sub> text.</p>
+
+<p>This is <sup>superscripted</sup> text.</p>
+
+Resumen
+<b> 	Defines bold text
+<em> 	Defines emphasized text 
+<i> 	Defines a part of text in an alternate voice or mood
+<small> 	Defines smaller text
+<strong> 	Defines important text
+<sub> 	Defines subscripted text
+<sup> 	Defines superscripted text
+<ins> 	Defines inserted text
+<del> 	Defines deleted text
+<mark> 	Defines marked/highlighted text
+
+
+HTML Quotation and Citation Elements
+
+HTML <blockquote> for Quotations
+
+The HTML <blockquote> element defines a section that is quoted from another source.
+
+Browsers usually indent <blockquote> elements.
+
+IMPORTANTE!!!!
+
+BLOCKQUOTE!!!!
+
+ <p>Here is a quote from WWF's website:</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+</blockquote> 
+
+
+
+--- HTML <q> for Short Quotations
+
+The HTML <q> tag defines a short quotation.
+
+Browsers normally insert quotation marks around the quotation.
+
+ <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p> 
+
+
+-- HTML <abbr> for Abbreviations
+
+The HTML <abbr> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".
+
+Marking abbreviations can give useful information to browsers, translation systems and search-engines.
+
+Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element. 
+ <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p> 
+
+
+----------------------------------------------------------
+IDEA PARA EL FOOTER
+----------------------------------------------------
+
+HTML <address> for Contact Information
+
+The HTML <address> tag defines the contact information for the author/owner of a document or an article.
+
+The contact information can be an email address, URL, physical address, phone number, social media handle, etc.
+
+The text in the <address> element usually renders in italic, and browsers will always add a line break before and after the <address> element.
+
+ <address>
+Written by John Doe.<br>
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address> 
+
+
+____________________________
+
+IDEA PARA RESALTAR LOS TITULOS DE LAS NOVELAS
+_________________________
+
+CITA:
+
+Note: A person's name is not the title of a work.
+
+The text in the <cite> element usually renders in italic.
+ <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p> 
+
+_________________________________________________________
+
+--- HTML <bdo> for Bi-Directional Override
+
+BDO stands for Bi-Directional Override.
+
+The HTML <bdo> tag is used to override the current text direction:
+
+ <bdo dir="rtl">This text will be written from right to left</bdo> 
+
+RESUMEN
+
+HTML Quotation and Citation Elements
+Tag 	Description
+<abbr> 	Defines an abbreviation or acronym
+<address> 	Defines contact information for the author/owner of a document
+<bdo> 	Defines the text direction
+<blockquote> 	Defines a section that is quoted from another source
+<cite> 	Defines the title of a work
+<q> 	Defines a short inline quotation
+
+------
+
+COMENTARIOS
+___
+
+<!-- Write your comments here -->
+
+
+Ocultar mas de una linea
+
+ <p>This is a paragraph.</p>
+<!--
+<p>Look at this cool image:</p>
+<img border="0" src="pic_trulli.jpg" alt="Trulli">
+-->
+<p>This is a paragraph too.</p> 
+
+__________________________
+
+
+HTML Colors
+
+______________________________
+
+1)))
+  background y fuente
+ <h1 style="background-color:DodgerBlue;">Hello World</h1>
+<p style="background-color:Tomato;">Lorem ipsum...</p> 
+
+ <h1 style="color:Tomato;">Hello World</h1>
+<p style="color:DodgerBlue;">Lorem ipsum...</p>
+<p style="color:MediumSeaGreen;">Ut wisi enim...</p> 
+2)))
+Border color:
+
+ <h1 style="border:2px solid Tomato;">Hello World</h1>
+<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+<h1 style="border:2px solid Violet;">Hello World</h1> 
+
+
+---- Color Values
+
+In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values.
+
+The following three <div> elements have their background color set with RGB, HEX, and HSL values:
+
+ <h1 style="background-color:rgb(255, 99, 71);">...</h1>
+<h1 style="background-color:#ff6347;">...</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+
+<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1> 
+
+OJO: EL ULTIMO VALOR 0.5 INDICA 50% DE TRANSPARENCIA
+
+ejemplo:
+
+Insert the HSLA value to make a color with no hue, 100% saturation, 50% lightness, and 50% transparency.
+<p style="color:hsla (0, 100%, 50%, 0.5)">This is a paragraph.</p> 
+
+
+--- Inline CSS
+ <h1 style="color:blue;">A Blue Heading</h1>
+
+<p style="color:red;">A red paragraph.</p> 
+
+--- Internal CSS
+
+Internal CSS
+
+An internal CSS is used to define a style for a single HTML page.
+
+An internal CSS is defined in the <head> section of an HTML page, within a <style> element.
+
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html> 
+
+---External CSS
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+EJEMPLO : STYLE.CSS
+
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+----------------------------
+CSS Colors, Fonts and Sizes
+
+Here, we will demonstrate some commonly used CSS properties. You will learn more about them later.
+
+The CSS color property defines the text color to be used.
+
+The CSS font-family property defines the font to be used.
+
+The CSS font-size property defines the text size to be used.
+
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 300%;
+}
+p {
+  color: red;
+  font-family: courier;
+  font-size: 160%;
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html> 
+
+___________
+CSS Border
+
+The CSS border property defines a border around an HTML element.
+
+Tip: You can define a border for nearly all HTML elements.
+
+p {
+  border: 2px solid powderblue;
+}
+
+
+CSS Padding
+
+The CSS padding property defines a padding (space) between the text and the border.
+
+p {
+  border: 2px solid powderblue;
+  padding: 30px;
+}
+
+
+CSS Margin
+
+The CSS margin property defines a margin (space) outside the border.
+
+p {
+  border: 2px solid powderblue;
+  margin: 50px;
+}
+
+
+Chapter Summary
+
+    Use the HTML style attribute for inline styling
+    Use the HTML <style> element to define internal CSS
+    Use the HTML <link> element to refer to an external CSS file
+    Use the HTML <head> element to store <style> and <link> elements
+    Use the CSS color property for text colors
+    Use the CSS font-family property for text fonts
+    Use the CSS font-size property for text sizes
+    Use the CSS border property for borders
+    Use the CSS padding property for space inside the border
+    Use the CSS margin property for space outside the border
+
+
+_____________________________________________
+
+HTML Links
+
+_____________________________________
+
+
+The HTML <a> tag defines a hyperlink. It has the following syntax:
+
+<a href="url">link text</a>
+
+
+HTML Links - The target Attribute
+
+By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.
+
+The target attribute specifies where to open the linked document.
+
+The target attribute can have one of the following values:
+
+    _self - Default. Opens the document in the same window/tab as it was clicked
+    _blank - Opens the document in a new window or tab
+    _parent - Opens the document in the parent frame
+    _top - Opens the document in the full body of the window
+
+
+ <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a> 
+
+
+____________________
+
+
+Use CSS to remove the underline from the link. QUITAR LA APARIENCIA DE ENLACE
+
+<a href="html_images.asp" style="text-decoration:none;">HTML Images</a> 
+
+
+USANDO UNA IMAGEN COMO LINK
+---------------------------------
+
+
+ <a href="default.asp">
+<img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a> 
+
+
+_____________________________
+
+Link to an Email Address
+
+Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):
+ <a href="mailto:someone@example.com">Send email</a> 
+________________________________
+
+
+Button as a Link
+
+To use an HTML button as a link, you have to add some JavaScript code.
+
+JavaScript allows you to specify what happens at certain events, such as a click of a button:
+
+ <button onclick="document.location='default.asp'">HTML Tutorial</button> 
+
+____________________________________
+Link Titles
+
+The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.
+
+ <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a> 
+
+___________________________
+
+
+Chapter Summary
+
+    Use the <a> element to define a link
+    Use the href attribute to define the link address
+    Use the target attribute to define where to open the linked document
+    Use the <img> element (inside <a>) to use an image as a link
+    Use the mailto: scheme inside the href attribute to create a link that opens the user's email program
+
+
+-----___
+
+BOOKMARK
+
+Add a link to a bookmark, on the same page, with the id="mytext".
+
+<a href="#mytext">Jump to new text</a> 
+____________________________________________
+
+HTML Link Colors
+
+By default, a link will appear like this (in all browsers):
+
+    An unvisited link is underlined and blue
+    A visited link is underlined and purple
+    An active link is underlined and red
+
+You can change the link state colors, by using CSS:
+Example
+
+Here, an unvisited link will be green with no underline. A visited link will be pink with no underline. An active link will be yellow and underlined. In addition, when mousing over a link (a:hover) it will become red and underlined:
+
+
+<style>
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style> 
+
+_______________________________________
+Link Buttons
+
+A link can also be styled as a button, by using CSS:
+
+
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+
+__________________________________________________
+
+Create a Bookmark in HTML
+
+Bookmarks can be useful if a web page is very long.
+
+To create a bookmark - first create the bookmark, then add a link to it.
+
+When the link is clicked, the page will scroll down or up to the location with the bookmark.
+
+
+Pasos crear bookmark
+
+First, use the id attribute to create a bookmark:
+
+<h2 id="C4">Chapter 4</h2>
+
+Then, add a link to the bookmark ("Jump to Chapter 4"), from within the same page:
+
+ <a href="#C4">Jump to Chapter 4</a> 
+
+You can also add a link to a bookmark on another page:
+
+<a href="html_demo.html#C4">Jump to Chapter 4</a>
+
+
+<a href="html_demo.html#C4">Jump to Chapter 4</a>
+
+
+
+
+--------------------------------------------------------
+
+Trabajo con imagenes
+
+-------------------------------------------------------
+
+Width and Height, or Style?
+
+The width, height, and style attributes are all valid in HTML.
+
+However, we suggest using the style attribute. It prevents styles sheets from changing the size of images:
+
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+<img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+
+<img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+</body>
+</html> 
+
+
+________________________________
+
+Image Floating
+
+Use the CSS float property to let the image float to the right or to the left of a text:
+
+ <p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+The image will float to the right of the text.</p>
+
+<p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+The image will float to the left of the text.</p> 
+
+
+___________________________________________________
+
+
+
+Image Maps
+
+The HTML <map> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <area> tags.
+
+Try to click on the computer, phone, or the cup of coffee in the image below:
+
+ <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map> 
+
+
+__________________________________________________
+
+
+Pasos para crear un mapa de imagenes
+
+______________________________
+
+
+The Image
+
+The image is inserted using the <img> tag. The only difference from other images is that you must add a usemap attribute:
+
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+The usemap value starts with a hash tag # followed by the name of the image map, and is used to create a relationship between the image and the image map.
+
+Create Image Map
+
+Then, add a <map> element.
+
+The <map> element is used to create an image map, and is linked to the image by using the required name attribute:
+
+
+<map name="workmap">
+The name attribute must have the same value as the <img>'s usemap attribute .
+
+The Areas
+
+Then, add the clickable areas.
+
+A clickable area is defined using an <area> element.
+Shape
+
+You must define the shape of the clickable area, and you can choose one of these values:
+
+    rect - defines a rectangular region
+    circle - defines a circular region
+    poly - defines a polygonal region
+    default - defines the entire region
+
+You must also define some coordinates to be able to place the clickable area onto the image. 
+
+
+Shape="rect"
+
+The coordinates for shape="rect" come in pairs, one for the x-axis and one for the y-axis.
+
+So, the coordinates 34,44 is located 34 pixels from the left margin and 44 pixels from the top:
+
+ <area shape="rect" coords="34, 44, 270, 350" href="computer.htm"> 
+
+
+Shape="circle"
+
+To add a circle area, first locate the coordinates of the center of the circle:
+
+337,300
+
+Then specify the radius of the circle:
+
+44 pixels
+
+ <area shape="circle" coords="337, 300, 44" href="coffee.htm"> 
+
+Shape="poly"
+
+The shape="poly" contains several coordinate points, which creates a shape formed with straight lines (a polygon).
+
+This can be used to create any shape.
+
+Like maybe a croissant shape!
+
+How can we make the croissant in the image below become a clickable link?
+
+
+ <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm"> 
+
+
+
+
+Image Map and JavaScript
+
+A clickable area can also trigger a JavaScript function.
+
+Add a click event to the <area> element to execute a JavaScript function:
+
+
+ <map name="workmap">
+  <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+</map>
+
+<script>
+function myFunction() {
+  alert("You clicked the coffee cup!");
+}
+</script> 
+
+
+Ejemplo:
+
+For image maps, specify a legal value for the area tag's shape attribute.
+
+(Any legal value will give a correct answer)
+
+<area shape="default" href="default.html"> 
+
+
+HTML Image Tags
+Tag 	Description
+<img> 	Defines an image
+<map> 	Defines an image map
+<area> 	Defines a clickable area inside an image map
+<picture> 	Defines a container for multiple image resources
+____________________________________
+
+Background Image on a HTML element
+
+To add a background image on an HTML element, use the HTML style attribute and the CSS background-image 
+property:
+
+ <p style="background-image: url('img_girl.jpg');"> 
+
+
+En la hoja de estilos
+
+ <style>
+body {
+  background-image: url('img_girl.jpg');
+}
+</style> 
+
+
+PARA EVITAR QUE SE REPITA
+
+ <style>
+body {
+  background-image: url('example_img_girl.jpg');
+  background-repeat: no-repeat;
+}
+</style> 
+
+
+Background Cover
+
+If you want the background image to cover the entire element, you can set the background-size property to cover.
+
+Also, to make sure the entire element is always covered, set the background-attachment property to fixed:
+
+This way, the background image will cover the entire element, with no stretching (the image will keep its original proportions)
+
+ <style>
+body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style> 
+
+
+Background Stretch
+
+If you want the background image to stretch to fit the entire element, you can set the background-size property to 100% 100%: 
+
+ <style>
+body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style> 
+
+
+__________________________________
+
+
+HTML <picture> Element
+
+The HTML <picture> element allows you to display different pictures for different devices or screen sizes.
+
+
+The HTML <picture> Element
+
+The HTML <picture> element gives web developers more flexibility in specifying image resources.
+
+The <picture> element contains one or more <source> elements, each referring to different images through the srcset attribute. This way the browser can choose the image that best fits the current view and/or device.
+
+Each <source> element has a media attribute that defines when the image is the most suitable.
+
+Example
+
+Show different images for different screen sizes:
+<picture>
+  <source media="(min-width: 650px)" srcset="img_food.jpg">
+  <source media="(min-width: 465px)" srcset="img_car.jpg">
+  <img src="img_girl.jpg">
+</picture> 
+
+Note: Always specify an <img> element as the last child element of the <picture> element. The <img> element is used by browsers that do not support the <picture> element, or if none of the <source> tags match.
+
+IMPORTANCIA DEL TITULO DE LA PAGINA: TITLE
+
+The title should describe the content and the meaning of the page.
+
+The page title is very important for search engine optimization (SEO). The text is used by search engine algorithms to decide the order when listing pages in search results.
+
+The <title> element:
+
+    defines a title in the browser toolbar
+    provides a title for the page when it is added to favorites
+    displays a title for the page in search engine-results
+
+So, try to make the title as accurate and meaningful as possible!
+
+________________________________________________
+
+HTML Tables
+---------------------------------------------------------------------------------
+
+
+Example
+
+A simple HTML table:
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table
+
+th --> table header
+
+By default, the text in <th> elements are bold and centered, but you can change that with CSS. 
+
+
+HTML Table Tags
+Tag 	Description
+<table> 	Defines a table
+<th> 	Defines a header cell in a table
+<tr> 	Defines a row in a table
+<td> 	Defines a cell in a table
+<caption> 	Defines a table caption
+<colgroup> 	Specifies a group of one or more columns in a table for formatting
+<col> 	Specifies column properties for each column within a <colgroup> element
+<thead> 	Groups the header content in a table
+<tbody> 	Groups the body content in a table
+<tfoot> 	Groups the footer content in a table
+
+
