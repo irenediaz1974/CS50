@@ -6,26 +6,38 @@
     font-weight: bold;
 }
 
-h1,h3 {
+h1,h3{
+  font-family: 'Dancing Script', cursive;
+  text-align: left;
+  font-size: 40px;
+  color: rgb(79, 100, 30);
+}
+
+h5 {
+  font-family: 'Dancing Script', cursive;
   text-align: left;
   font-size: 30px;
   color: rgb(79, 100, 30);
 }
 
 h6 {
-text-align: right;
+font-family: 'Dancing Script', cursive;
+text-align: center;
+font-size: 30px;
 color: rgb(79, 100, 30);
 font-weight: bold;
 }
 
 #myNavbar .nav-link {
-    color: #fff !important;
+    font-family: 'Dancing Script', cursive;
+    color: rgb(243, 243, 250);
     margin-right: 16px;
+
 }
 @keyframes colorchange {
-    0%   {background-color: gray;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
+    0%   {background-color: rgb(146, 55, 13);}
+    50%  {background-color: rgb(79, 100, 30);}
+    100% {background-color: rgb(160, 142, 40);}
   }
 
   .mybook {
@@ -45,18 +57,20 @@ font-weight: bold;
 .carousel-caption h2,
 .carousel-caption h5,
 .carousel-caption p {
+text-align: center;  
 color: rgb(8, 8, 8);
 }
 
 
 
 .banner {
-  background-color: #f0f0f0;
-  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  background-color:  #e5e5e5;
+  text-align: left;
   padding: 20px 0;
   margin-bottom: 20px;
   font-size: 28px;
-  color: rgb(79, 100, 30)
+  color: rgb(26, 32, 11);
 
 }
 .grid-container {
@@ -78,7 +92,9 @@ color: rgb(8, 8, 8);
 #texto .column {
   flex: 1;
   margin: 10px;
+  font-family:'Times New Roman', Times, serif;
   text-align: justify;
+
 }
 #texto h6 {
   text-align: center;
@@ -95,19 +111,15 @@ footer {
 }
 
 
-/* Estilos agregados de la plantilla que tome del sitio del tutorial  */
-<style>
-    * {
-      box-sizing: border-box;
-    }
-
-    .menu {
+/* Estilos agregados de la plantilla que tome del sitio del tutorial  */   
+.menu {
       float: left;
       width: 20%;
       text-align: center;
-    }
+}
 
-    .menu a {
+.menu a {
+      font-family: 'Dancing Script', cursive;
       background-color: #e5e5e5;
       padding: 8px;
       margin-top: 7px;
@@ -115,26 +127,34 @@ footer {
       width: 100%;
       color: black;
       text-align: justify;
-    }
+}
 
-    .main {
+.main {
+      font-family: 'Times New Roman', Times, serif;
       float: left;
       width: 60%;
       padding: 0 20px;
-    }
+}
 
-    .right {
+.right {
+      font-family: 'Times New Roman', Times, serif;
       background-color: #e5e5e5;
       float: left;
       width: 20%;
       padding: 15px;
       margin-top: 7px;
-      text-align: center;
-    }
+      text-align: justify;
+}
 
-    @media only screen and (max-width: 620px) {
-      /* For mobile phones: */
-      .menu, .main, .right {
-        width: 100%;
-      }
-    }
+@media only screen and (max-width: 620px) {
+ /* For mobile phones: */
+.menu, .main, .right {
+     width: 100%;
+  }
+}
+.referencia {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: right;
+}
