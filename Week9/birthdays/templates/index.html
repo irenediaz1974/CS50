@@ -12,9 +12,25 @@
         </div>
         <div class="container">
             <div class="section">
-
+                {% if request.args.get('error') %}
+                     <div class="alert">
+                         {{ request.args.get('error') }}
+                     </div>
+                {% endif %}
                 <h2>Add a Birthday</h2>
                 <!-- TODO: Create a form for users to submit a name, a month, and a day -->
+                {% block body %}
+                     <form action="/" method="post">
+                        <input type="text" id="fname" name="fname" placeholder="Name" required>
+                        <input type="number" id="month" name="month" placeholder="Month" min="1" max="12" required>
+                        <input type="number" id="day" name="day" placeholder="Day" min="1" max="31" required>
+                        <button type="submit">Add Birthday</button>
+                    </form>
+                    <form action="/delete" method="post">
+                        <input type="text" id="delname" name="delname" placeholder="Name to delete" required>
+                        <button type="submit">Delete Name</button>
+                    </form>
+                {% endblock %}
             </div>
 
             <div class="section">
@@ -28,7 +44,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- TODO: Loop through the database entries to display them in this table -->
+                        {% for row in rows %}
+                        <tr>
+                            <td>{{ row['name'] }}</td>
+                            <td>{{ row['month'] }}/{{ row['day'] }}</td>
+                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
