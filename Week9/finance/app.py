@@ -4,7 +4,7 @@ from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
-
+from flask import url_for
 from helpers import apology, login_required, lookup, usd
 
 # Configure application
@@ -120,10 +120,8 @@ def quote():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-
     # Forget any user_id
     session.clear()
-
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
         # Ensure username was submitted
@@ -144,13 +142,11 @@ def register():
                 return redirect("/register")
             else:
                 # Insert username and password into database
-                db.execute("INSERT INTO users (username, password) VALUES (?, ?)", request.form.get("username"), generate_password_hash(request.form.get("password")))
-                result = db.execute("SELECT LAST_INSERT_ID()")
-                user_id = result[0]["LAST_INSERT_ID()"]
-                session["user_id"] = user_id
+                db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), generate_password_hash(request.form.get("password")))
+                last_id = db.execute("SELECT last_insert_rowid()")[0]["last_insert_rowid()"]
+                session["user_id"] = last_id
                 # abrir sesion y mostrar portfolio de stoks por user
-                user_id = db.execute("SELECT LAST_INSERT_ID()")
-                return render_template("index.html", user_id=session["user_id"])
+                redirect(url_for('index'))
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("register.html")
