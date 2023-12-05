@@ -13,9 +13,15 @@
             <th class="text-end">Shares</th>
             <th class="text-end">Price</th>
             <th class="text-end">TOTAL</th>
-        </tr>
+            </tr>
     </thead>
    <tbody>
+         {% for row in rows %}
+            <tr>
+                <td>{{ row['symbol'] }}</td>
+                <td>{{ row['shares'] }}</td>              
+             </tr>
+        {% endfor %}
 
     </tbody>
     <tfoot>
