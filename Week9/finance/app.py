@@ -34,15 +34,23 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    """Show portfolio of stocks """
-    result = db.execute("SELECT * FROM stocks WHERE user_id= ? ", session["user_id"])
-    # Add price and name actual to the user stocks
-    for row in result:
-        symbol_dict = lookup(row["symbol"])
-        row.update(symbol_dict)
+    if request.method == "POST":
+       """Show portfolio of stocks """
+       result = db.execute("SELECT * FROM stocks WHERE user_id= ? ", session["user_id"])
+         # Add price and name actual to the user stocks
+       rows_result=[]
+       for row in result:
+            stocks_data={"symbol": row["symbol"], "shares": row["shares"]}
+            symbol_dict = lookup(row["symbol"])
+            if symbol_dict:
+               stocks_data.update(symbol_dict)
+               rows_result.append(stocks_data)
+             # Open portfolio page (index.html)
+               return render_template("index.html", rows=rows_result)
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("index.html")
 
-    return render_template("index.html", rows=result)
-    
 
 
 @app.route("/buy", methods=["GET", "POST"])
