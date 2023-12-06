@@ -57,7 +57,19 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+        #TODO: Revisar si lo que esta escrito en shares es correcto, sino apology
+         if not request.form.get("shares"):
+            return apology("missing shares", 400)
+            #TODO: Ensure the user have cash by consulting users table and calculate sharesxprice
+            row = db.execute("SELECT cash FROM users WHERE id=?", session["user_id"])
+            cash = int(row[0]["cash"])
+            stock=lookup(request.form.get("symbol"))
+            # mostrar portfolio de stoks por user index and send flash message
+            flash("Bought!")
+            return redirect(url_for('index'))
+    else:
+        return render_template("buy.html")
 
 
 @app.route("/history")
@@ -158,6 +170,7 @@ def register():
             last_id = db.execute("SELECT last_insert_rowid()")[0]["last_insert_rowid()"]
             session["user_id"] = last_id
             # abrir sesion y mostrar portfolio de stoks por user index function
+            flash("Registered!")
             return redirect(url_for('index'))
     # User reached route via GET (as by clicking a link or via redirect)
     else:
