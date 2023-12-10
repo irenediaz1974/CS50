@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Portfolio
+    Log In
 {% endblock %}
 
 {% block main %}
@@ -18,10 +18,10 @@
    <tbody>
          {% for row in rows %}
             <tr>
-                <td>{{ row['symbol'] }}</td>
-                <td>{{ row['name'] }}</td>  
-                <td>{{ row['shares'] }}</td> 
-                <td>{{ row['price'] }}</td>             
+                <td>{{ row['symbol']}}</td>
+                <td>{{ row['name'] }}</td>
+                <td>{{ row['shares']}}</td>
+                <td>{{ row['price']}}</td>
              </tr>
         {% endfor %}
 

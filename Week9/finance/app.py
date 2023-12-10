@@ -47,29 +47,17 @@ def index():
                rows_result.append(stocks_data)
              # Open portfolio page (index.html)
                return render_template("index.html", rows=rows_result)
+
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("index.html")
-
 
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
     """Buy shares of stock"""
-    if request.method == "POST":
-        #TODO: Revisar si lo que esta escrito en shares es correcto, sino apology
-         if not request.form.get("shares"):
-            return apology("missing shares", 400)
-            #TODO: Ensure the user have cash by consulting users table and calculate sharesxprice
-            row = db.execute("SELECT cash FROM users WHERE id=?", session["user_id"])
-            cash = int(row[0]["cash"])
-            stock=lookup(request.form.get("symbol"))
-            # mostrar portfolio de stoks por user index and send flash message
-            flash("Bought!")
-            return redirect(url_for('index'))
-    else:
-        return render_template("buy.html")
+    return apology("TODO")
 
 
 @app.route("/history")
@@ -147,9 +135,10 @@ def quote():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+
     # Forget any user_id
     session.clear()
-    # User reached route via POST (as by submitting a form via POST)
+
     if request.method == "POST":
         # Ensure username was submitted
         dict={"username": request.form.get("username"), "password":request.form.get("password"), "confirmation": request.form.get("confirmation")}
@@ -170,7 +159,6 @@ def register():
             last_id = db.execute("SELECT last_insert_rowid()")[0]["last_insert_rowid()"]
             session["user_id"] = last_id
             # abrir sesion y mostrar portfolio de stoks por user index function
-            flash("Registered!")
             return redirect(url_for('index'))
     # User reached route via GET (as by clicking a link or via redirect)
     else:
