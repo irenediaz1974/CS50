@@ -21,3 +21,33 @@ nav .navbar-brand .green
 {
     color: #2e944b;
 }
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px; /* Ajusta este valor a tu gusto */
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+}
+
+.text-start {
+    text-align: left;
+}
+
+.text-end {
+    text-align: right;
+}
