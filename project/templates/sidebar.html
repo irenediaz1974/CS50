@@ -1,0 +1,38 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+  
+    <link href="/static/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/static/styles.css" rel="stylesheet">
+
+    <title>CS50 Readability: {% block title %}{% endblock %}</title>
+
+</head>
+<body>z
+
+
+<h2>Menú Lateral</h2>
+<ul>
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/about">Acerca de</a></li>
+    <li><a href="/contact">Contacto</a></li>
+    <li><a href="/blog">Blog</a></li>
+</ul>
+
+
+<h3>Enlaces rápidos</h3>
+<ul>
+    <li><a href="#">Politica de Privacidad</a></li>
+    <li><a href="#">Términos y Condiciones</a></li>
+</ul>
+
+<script>
+    $(document).ready(function() {
+        $('.menu-item').click(function() {
+            window.location.href = $(this).attr('href');
+        });
+    });
+</script>
