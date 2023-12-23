@@ -5,7 +5,48 @@
 {% endblock %}
 
 {% block main %}
-
+<!--Carousel from bootstrap -->
+<div id="carouselCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="static/img/Figure_3.png" class="d-block w-100" alt="Introduccion">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5> Este es el proyecto <strong>homepage</strong> de la semana 8.<br>
+                        Elegí algunas obras de Jane Austen, una de mis escritoras preferidas.<br>
+                         Además de ser una escritora universalmente conocida</h5>
+                    <p>Se realizó para CS50 usando html, css y javascript.</p>
+                </div>
+        </div>
+        <div class="carousel-item">
+            <img src="static/img/Figure_3.png" class="d-block w-100" alt="Utilizando Bootstrap">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Se utiliza Boostrap 5.2.3  para varios elementos de las páginas.<br>
+                         También se utilizan estilos y sugerencias de la CS50.ai, la cual ha sido de gran ayuda para este proyecto de clases. </h5>
+                    <p>Esto es un ejemplo de carousel</p>
+                </div>
+        </div>
+        <div class="carousel-item">
+            <img src="static/img/Figure_3.png" class="d-block w-100" alt="Imagenes de Pixabay">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5> Las imagenes fueron tomadas de Pixabay , Wikipedia, y se referencian su fuente</h5>
+                    <p>Incluí en el codigo la información de las imagenes de Pixabay</p>
+                </div>
+        </div>
+    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+</div>
 
 
 {% endblock %}
