@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Análisis de sentimiento
+{% endblock %}
+
+{% block main %}
+<h2>Utilizando BeautifulSoup y NLTK de Python</h2><br>
+
+<p>Introduzca el url del sitio a analizar:</p>
+    <form action="/sentiment" method="post">
+        <input type="text" id="url" name="url" placeholder="Url" required>
+        <input type="submit" value="Analizar">
+    </form>
+    <br>
+
+{% endblock %}
