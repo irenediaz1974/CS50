@@ -65,3 +65,13 @@ body {
 hr {
   border: 1px solid #000;
 }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  margin: 10px;
+}

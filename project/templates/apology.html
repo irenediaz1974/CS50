@@ -5,6 +5,9 @@
 {% endblock %}
 
 {% block main %}
-    <!-- https://memegen.link/ -->
-    <img alt="{{ msg }}" class="border img-fluid" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png&width=400" title="{{ msg }}">
+    <div style="border: 2px solid red; padding: 10px;">
+        <h1> Ha ocurrido un error No:  {{ msg }}{{ top }}</h1>
+        <br>
+        <h1>{{bottom}}</h1>
+        </div> 
 {% endblock %}

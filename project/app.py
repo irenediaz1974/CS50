@@ -54,16 +54,14 @@ def estadistica():
         try:
             response = requests.get(url)
             if response.status_code != 200:
-                return apology("Revise URL", 500)
+                return apology("Revise la url", 500)
         except requests.exceptions.MissingSchema:
-            return apology("Revise URL", 400)
-
+            return apology("Revise la url", 400)
         try:
-            estadisticas=obtener_estadisticas(url)
-            return render_template("sentiment.html", estadisticas)
-        except:
-            msg="Error en la obtención de estadisticas"
-            return apology("an error occurred", 403)
+            num_words, num_segments, average_sentiment, compound_scores=obtener_estadisticas(url)
+            return render_template("sentiment.html", num_words=num_words, num_segments=num_segments, average_sentiment=average_sentiment, compound_scores=compound_scores)
+        except:            
+            return apology("Error en la obtención de estadisticas", 403)
     else:
             return render_template("estadistica.html")
 

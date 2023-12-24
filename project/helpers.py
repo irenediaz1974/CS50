@@ -30,7 +30,6 @@ def obtener_estadisticas(url):
     #    for paragraph in article_text:
     #       f.write(paragraph + '\n')
     num_words = sum(len(p.split()) for p in article_text)
-    print("Number of words: " + str(num_words))
     # Combina todos los párrafos en una única cadena de texto
     full_text = ' '.join(article_text)
     # Ahora divide full_text en segmentos de 1000 caracteres
@@ -57,10 +56,11 @@ def obtener_estadisticas(url):
         # Agregar la puntuación del sentimiento a la lista
         sentiments.append(sentiment)
     num_segments = len(sentiments)
-    print("cantidad de sentiments " + str(num_segments))
+   
     # Obtener la puntuación del  "compound score"
     compound_scores = [sentiment['compound'] for sentiment in sentiments]
-    print (compound_scores)
+    # print (compound_scores)
+    average_sentiment = sum(compound_scores) / len(compound_scores)
     # crear histograma
     plt.hist(compound_scores, bins=10)
     plt.xlabel('Compound Score')
@@ -76,10 +76,9 @@ def obtener_estadisticas(url):
         plt.legend(['Negativo', 'Neutral', 'Positivo'])
         plt.savefig(f'static/img/segment_{i}.png')  # Save the image as 'segment_0.png', 'segment_1.png', etc.
         plt.clf()  # Clear the figure for the next plot
-
-    average_sentiment = sum(compound_scores) / len(compound_scores)
     # Imprimir la puntuación del sentimiento promedio
-    print(average_sentiment)
+    print("promedio de sentiment" + str(average_sentiment))
+    return (num_words, num_segments, average_sentiment, compound_scores)
 
 
 def readability(texto):

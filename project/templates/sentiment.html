@@ -5,13 +5,16 @@
 {% endblock %}
 
 {% block main %}
-<h2>Utilizando BeautifulSoup y NLTK de Python</h2><br>
+<h2>Utilizando BeautifulSoup y NLTK de Python</h2>
+<p>{{num_words}}, {{num_segments}}, {{average_sentiment}}, {{compound_scores}}</p>
+<hr>
 
-<p>Introduzca el url del sitio a analizar:</p>
-    <form action="/sentiment" method="post">
-        <input type="text" id="url" name="url" placeholder="Url" required>
-        <input type="submit" value="Analizar">
-    </form>
-    <br>
+<div class="flex-container">
+    <div class="flex-item"><img src="static/img/histogram.png" alt="Histogram"></div>
+    <div class="flex-item">Imagen 2</div>
+    <!-- Más imágenes aquí -->
+</div>
+
+
 
 {% endblock %}
