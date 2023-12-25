@@ -9,7 +9,8 @@
 <p>Introduzca la direccion completa(https://www.ejemplo.com) (sitio escrito en ingles):</p>
     <form action="/estadistica" method="post">
         <input type="text" id="url" name="url" placeholder="url" required>
-        <input type="submit" value="Análisis">
+        <button type="submit" onclick="showLoading()">Submit</button>
+        <img id="loading" src="static/img/loading.gif" style="display: none;">    
     </form>
 
     <div style="text-align: left;">
@@ -17,8 +18,12 @@
         <h3>Utilizando las bibliotecas Beautiful Soup y NLTK</h3><br>
         <ul style="display: inline-block; text-align: left;">
             <li>Beautiful Soup es una biblioteca de Python para analizar documentos HTML. Esta biblioteca crea un árbol con todos los elementos del documento y puede ser utilizado para extraer información. Por lo tanto, esta biblioteca es útil para realizar web scraping — extraer información de sitios web. Wikipdia </li>
-            <li>El kit de herramientas de lenguaje natural, o más comúnmente NLTK, es un conjunto de bibliotecas y programas para el procesamiento del lenguaje natural simbólico y estadísticos para el lenguaje de programación Python. Wikipdia</li>
+            <li>El kit de herramientas de lenguaje natural, o más comúnmente NLTK, es un conjunto de bibliotecas y programas para el procesamiento del lenguaje natural simbólico y estadísticos para el lenguaje de programación Python. Wikipedia</li>
         </ul>
     </div>
-
+    <script>
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+        }
+        </script>
 {% endblock %}

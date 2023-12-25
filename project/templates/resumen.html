@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Resumen de texto
+{% endblock %}
+
+{% block main %}
+<h2>Resumen de textos. Detección de NER</h2><br>
+
+    <form action="/resumen" method="post">
+        <textarea name="myTextarea" rows="4" cols="50">
+            Escriba el texto a clasificar ...
+        </textarea>
+        <br>
+        <input type="submit" value="Obtención de NER" style="margin-top: 20px;">
+    </form>
+       
+    {% if show_resumen %}
+        <div style="border: 2px solid black; padding: 10px">
+            <ul>
+                {% for entidad in entidades %}
+                    <li>{{ entidad.tipo }}: {{ entidad.tokens|join(' ') }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+{% endblock %}

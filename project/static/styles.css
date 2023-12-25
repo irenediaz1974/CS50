@@ -4,7 +4,8 @@ h1 {
     text-align: center;
     color: rgb(26, 32, 11);
     font-weight: bold;
-    padding: 10px 15px 20px 25px;
+    padding: 25px 15px 15px 15px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 h2{
@@ -13,6 +14,14 @@ h2{
   font-size: 25px;
   color: rgb(79, 100, 30);
   padding: 10px 15px 20px 25px;
+}
+
+h4 {
+  font-family: 'Verdana', sans-serif;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(255,0,0);
 }
 
 h3, h5 {
@@ -28,6 +37,19 @@ text-align: center;
 font-size: 16px;
 color: rgb(79, 100, 30);
 font-weight: bold;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  position: relative;
+  top: 15px;
+  left: 10px;
+}
+
+.navbar {
+  height: 70px;
+  background-color: black;
 }
 
 body {
@@ -74,4 +96,30 @@ hr {
 
 .flex-item {
   margin: 10px;
+}
+
+div {
+  display: inline-block;
+}
+
+.image-container {
+  text-align: center; /* centra las imágenes */
+}
+
+.image-container img {
+  display: inline-block;
+  width: 40%; /* ajusta según tus necesidades */
+  margin: 1%; /* proporciona un poco de espacio alrededor de las imágenes */
+}
+
+.separador {
+  border-top: 5px solid #000; /* Cambia el color según tu diseño */
+  margin: 20px 0; /* Ajusta el margen según tus necesidades */
+}
+
+#loading {
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  transform: translate(-50%, -50%);
 }

@@ -6,16 +6,31 @@
 
 {% block main %}
 <h2>Utilizando BeautifulSoup y NLTK de Python</h2>
-<h5>Numero de palabras: {{num_words}}</h5>>
-    (Segmentos creados de 1000 caracteres: {{num_segments}}) , {{average_sentiment}}, {{compound_scores}}</p>
+
+<h5>Numero de palabras: {{num_words}}<br>
+    Segmentos creados de 1000 caracteres: {{num_segments}}<br>
+    Valores de Sentiment por segmentos: [{{compound_scores}}]<br>
+     Sentiment Promedio: {{average_sentiment}}</h5>
+
+
+<div class="separador"></div>
+<p> Con matplotlib se crearon los graficos tipo pastel por cada segmento de parrafo de la url suministrada y un histograma que muestra la distribucion del sentiment.</p>
+
 <hr>
 
-<div class="flex-container">
-    <div class="flex-item"><img src="static/img/histogram.png" alt="Histogram"></div>
-    <div class="flex-item">Imagen 2</div>
-    <!-- Más imágenes aquí -->
-</div>
+<section class="image-container">
+    <img src="static/img/histogram.png" alt="Histogram">
+    {% for i in range(num_segments) %}
+        <img src="{{ url_for('static', filename='img/segment_' + i|string + '.png') }}" alt="Segment Image">
+    {% endfor %}
+</section>
 
+<script>
+    window.onload = function() {
+        document.getElementById('loading').style.display = 'none';
+    }
+    </script>
+    
 
 
 {% endblock %}
