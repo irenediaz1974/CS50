@@ -1,11 +1,11 @@
 # Mi proyecto de Flask "READABILITY"
 
-#### Video Demo:  <URL HERE>
+#### Video Demo:  <https://youtu.be/3Pk1GdUG8XI>
 
 
 ## Introducción
 
-Este proyecto utiliza técnicas de procesamiento del lenguaje natural como la Extracción de Entidades Nombradas (NER) y el análisis de sentimientos, implementadas con la biblioteca NLTK de Python. También se utiliza la biblioteca Beautiful Soup para realizar web scraping.
+Este proyecto está hecho en Flask y utiliza técnicas de procesamiento del lenguaje natural tales como: Extracción de Entidades Nombradas (NER) y análisis de SENTIMENT, implementadas con la biblioteca NLTK de Python y Beautiful Soup para el web scraping.
 
     - El análisis de sentimientos con NLTK y el web scraping con Beautiful Soup tienen algunas limitaciones a tener en cuenta:
 
