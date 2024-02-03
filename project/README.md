@@ -23,7 +23,7 @@ Este proyecto está hecho en Flask y utiliza técnicas de procesamiento del leng
    + Un puntaje entre -0.05 y 0.05 se puede interpretar como neutro.
 + Menú 3: (Resumen). Este menú utiliza la libreria NLTK para extraer entidades (NER) utilizando el modulo ne_chunk que etiqueta los nombres propios como 'NE' (Named Entity). Primero, el texto se divide en frases, luego cada frase se divide en palabras (esto se llama tokenización), y luego cada palabra se etiqueta con su parte de discurso (por ejemplo, sustantivo, verbo, adjetivo, etc.). Finalmente, ne_chunk utiliza estas etiquetas para identificar las entidades nombradas.
 
-        - Es importante mencionar que NLTK puede no ser perfecto en la identificación de entidades nombradas, especialmente si el texto tiene errores gramaticales o de ortografía, o si las entidades nombradas son menos comunes o están en un idioma diferente al inglés.
+ + Es importante mencionar que NLTK puede no ser perfecto en la identificación de entidades nombradas, especialmente si el texto tiene errores gramaticales o de ortografía, o si las entidades nombradas son menos comunes o están en un idioma diferente al inglés.
 
 ## Instalación
 
