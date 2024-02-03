@@ -50,7 +50,7 @@ Otras bibliotecas que se importan en el proyecto son:
 
 ```python
 import os
-import glob
+import glob ´´´
 
 
 ## Uso
