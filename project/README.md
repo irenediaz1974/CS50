@@ -45,13 +45,13 @@ nltk.download('vader_lexicon')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('maxent_ne_chunker')
 nltk.download('words')
-
+```
 Otras bibliotecas que se importan en el proyecto son:
 
 ```python
 import os
-import glob ´´´
-
+import glob 
+```
 
 ## Uso
 Esta aplicación no requiere registro, esta elaborada para CS50x por lo que es un proyecto de curso. Utiliza técnicas de web scraping. El uso de estas técnicas depende del usuario y debe realizarse de acuerdo con las leyes y los términos de servicio del sitio web objetivo. El usuario es responsable de cualquier uso del web scraping realizado a través de este proyecto.
