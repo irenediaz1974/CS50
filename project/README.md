@@ -1,19 +1,18 @@
-# Mi proyecto de Flask "READABILITY"
+# "READABILITY". Flask Project.
 
 #### Video Demo:  <https://youtu.be/3Pk1GdUG8XI>
-
 
 ## Introducción
 
 Este proyecto está hecho en Flask y utiliza técnicas de procesamiento del lenguaje natural tales como: Extracción de Entidades Nombradas (NER) y análisis de SENTIMENT, implementadas con la biblioteca NLTK de Python y Beautiful Soup para el web scraping.
 
-    - El análisis de sentimientos con NLTK y el web scraping con Beautiful Soup tienen algunas limitaciones a tener en cuenta:
+### El análisis de sentimientos con NLTK y el web scraping con Beautiful Soup tienen algunas limitaciones a tener en cuenta:
 
-        NLTK: El análisis de sentimientos depende en gran medida de la calidad del modelo de aprendizaje automático que se utiliza. Los modelos preentrenados de NLTK pueden no funcionar bien con textos que contienen jerga, errores gramaticales o de ortografía, o con textos en un idioma diferente al inglés. Además, el análisis de sentimientos puede ser difícil de interpretar en textos que contienen sarcasmo o doble sentido.
+        + NLTK: El análisis de sentimientos depende en gran medida de la calidad del modelo de aprendizaje automático que se utiliza. Los modelos preentrenados de NLTK pueden no funcionar bien con textos que contienen jerga, errores gramaticales o de ortografía, o con textos en un idioma diferente al inglés. Además, el análisis de sentimientos puede ser difícil de interpretar en textos que contienen sarcasmo o doble sentido.
 
-        Beautiful Soup: Esta biblioteca es excelente para extraer datos de páginas web, pero puede tener problemas con sitios web que utilizan mucho JavaScript para cargar su contenido, ya que Beautiful Soup no ejecuta JavaScript. Además, el web scraping depende de la estructura de la página web, por lo que si la página cambia su diseño, es posible que tengas que actualizar tu código de scraping.
+        + Beautiful Soup: Esta biblioteca es excelente para extraer datos de páginas web, pero puede tener problemas con sitios web que utilizan mucho JavaScript para cargar su contenido, ya que Beautiful Soup no ejecuta JavaScript. Además, el web scraping depende de la estructura de la página web, por lo que si la página cambia su diseño, es posible que tengas que actualizar tu código de scraping.
 
-    - La Extracción de Entidades Nombradas (NER) en NLTK se realiza utilizando el módulo ne_chunk que etiqueta los nombres propios como 'NE' (Named Entity). Primero, el texto se divide en frases, luego cada frase se divide en palabras (esto se llama tokenización), y luego cada palabra se etiqueta con su parte de discurso (por ejemplo, sustantivo, verbo, adjetivo, etc.). Finalmente, ne_chunk utiliza estas etiquetas para identificar las entidades nombradas.
+        + La Extracción de Entidades Nombradas (NER) en NLTK se realiza utilizando el módulo ne_chunk que etiqueta los nombres propios como 'NE' (Named Entity). Primero, el texto se divide en frases, luego cada frase se divide en palabras (esto se llama tokenización), y luego cada palabra se etiqueta con su parte de discurso (por ejemplo, sustantivo, verbo, adjetivo, etc.). Finalmente, ne_chunk utiliza estas etiquetas para identificar las entidades nombradas.
 
 > **Nota**: Esta información fue generada con la ayuda de la IA de CS50.
 
