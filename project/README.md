@@ -17,7 +17,7 @@ Este proyecto está hecho en Flask y utiliza técnicas de procesamiento del leng
 ### Aplicación web que permite a los usuarios realizar análisis básicos de texto.
 + Menú 1: (Readability). En esta opción se hace un cálculo de la legibilidad de un texto no mayor de 200 palabras utilizando la fórmula de Coleman-Liu vista en el problema Readability del curso.
 
-![Sentiment_imagen](/static/img/sentiment.png)
+![Sentiment_imagen](./static/img/sentiment.png)
 
 + Menú 2: (Sentiment). En esta opción se realiza un web scraping de una dirección(url) suministrada por el usuario. En esta tarea se utiliza la biblioteca Beautiful Soup para analizar html en la url suministrada por el usuario (para este proyecto solo las tags de párrafo) y extraer contenido para procesarlo y analizarlo con NLTK, en este caso se  calcula el sentimiento por segmentos de 1000 caracteres y el sentimiento promedio del texto. Luego del análisis se utiliza matplotlib para graficar un histograma de los "compound scores" de cada segmento para visualizar su variabilidad y se realiza un grafico de pie por cada segmento con los puntajes positivos, negativos y neutro para tener una vision de como se comporta el sentiment en el texto extraido.
  + Interpretación de los puntajes de sentimiento. Los puntajes compuestos varían de -1 (muy negativo) a 1 (muy positivo).
@@ -25,7 +25,7 @@ Este proyecto está hecho en Flask y utiliza técnicas de procesamiento del leng
    + Un puntaje menor a -0.05 se puede interpretar como negativo.
    + Un puntaje entre -0.05 y 0.05 se puede interpretar como neutro.
 
-![NER_imagen](/static/img/NER.png)
+![NER_imagen](./static/img/NER.png)
 
 + Menú 3: (Resumen). Este menú utiliza la libreria NLTK para extraer entidades (NER) utilizando el modulo ne_chunk que etiqueta los nombres propios como 'NE' (Named Entity). Primero, el texto se divide en frases, luego cada frase se divide en palabras (esto se llama tokenización), y luego cada palabra se etiqueta con su parte de discurso (por ejemplo, sustantivo, verbo, adjetivo, etc.). Finalmente, ne_chunk utiliza estas etiquetas para identificar las entidades nombradas.
 
